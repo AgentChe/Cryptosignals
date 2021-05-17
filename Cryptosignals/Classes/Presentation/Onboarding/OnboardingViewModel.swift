@@ -12,25 +12,21 @@ final class OnboardingViewModel {
     enum Step {
         case paygateBlock
         case paygateSuggest
-        case nextScreen
+        case main
     }
     
     private lazy var sessionManager = SessionManagerCore()
     private lazy var monetizationManager = MonetizationManagerCore()
     
-    var hasSelectedCourse: Bool {
-        false
-    }
-    
     func whatNext() -> Step {
         let hasActiveSubscription = sessionManager.getSession()?.activeSubscription ?? false
         
         if hasActiveSubscription {
-            return .nextScreen
+            return .main
         }
         
         guard let config = monetizationManager.getMonetizationConfig() else {
-            return .nextScreen
+            return .main
         }
         
         switch config {

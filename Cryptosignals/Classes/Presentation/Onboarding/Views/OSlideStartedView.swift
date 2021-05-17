@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class OSlide1View: OSlideView {
+final class OSlideStartedView: OSlideView {
     lazy var imageView = makeImageView()
     lazy var text1Label = makeText1Label()
     lazy var text2Label = makeText2Label()
@@ -25,42 +25,42 @@ final class OSlide1View: OSlideView {
 }
 
 // MARK: Make constraints
-private extension OSlide1View {
+private extension OSlideStartedView {
     func makeConstraints() {
         NSLayoutConstraint.activate([
             imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
             imageView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            imageView.topAnchor.constraint(equalTo: topAnchor),
-            imageView.heightAnchor.constraint(equalToConstant: ScreenSize.isIphoneXFamily ? 483.scale : 370.scale)
+            imageView.topAnchor.constraint(equalTo: topAnchor, constant: 84.scale),
+            imageView.heightAnchor.constraint(equalToConstant: ScreenSize.isIphoneXFamily ? 393.scale : 280.scale)
         ])
         
         NSLayoutConstraint.activate([
             text1Label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16.scale),
             text1Label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16.scale),
-            text1Label.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 8.scale)
+            text1Label.bottomAnchor.constraint(equalTo: text2Label.topAnchor, constant: -12.scale)
         ])
         
         NSLayoutConstraint.activate([
             text2Label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16.scale),
             text2Label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16.scale),
-            text2Label.topAnchor.constraint(equalTo: text1Label.bottomAnchor, constant: 14.scale)
+            text2Label.bottomAnchor.constraint(equalTo: button.topAnchor, constant: -39.scale)
         ])
         
         NSLayoutConstraint.activate([
-            button.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 26.scale),
-            button.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -26.scale),
-            button.heightAnchor.constraint(equalToConstant: 60.scale),
-            button.bottomAnchor.constraint(equalTo: bottomAnchor, constant: ScreenSize.isIphoneXFamily ? -70.scale : -30.scale)
+            button.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16.scale),
+            button.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16.scale),
+            button.heightAnchor.constraint(equalToConstant: 61.scale),
+            button.bottomAnchor.constraint(equalTo: bottomAnchor, constant: ScreenSize.isIphoneXFamily ? -60.scale : -30.scale)
         ])
     }
 }
 
 // MARK: Lazy initialization
-private extension OSlide1View {
+private extension OSlideStartedView {
     func makeImageView() -> UIImageView {
         let view = UIImageView()
         view.contentMode = .scaleAspectFit
-        view.image = UIImage(named: "Onboarding.Slide1")
+        view.image = UIImage(named: "Onboarding.SlideStarted")
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view
@@ -68,13 +68,14 @@ private extension OSlide1View {
     
     func makeText1Label() -> UILabel {
         let attrs = TextAttributes()
-            .textColor(UIColor.black)
-            .font(Fonts.SFProDisplay.bold(size: 30.scale))
-            .lineHeight(35.scale)
+            .textColor(UIColor.white)
+            .font(Fonts.SFProDisplay.bold(size: 36.scale))
+            .lineHeight(43.scale)
+            .textAlignment(.left)
         
         let view = UILabel()
         view.numberOfLines = 0
-        view.attributedText = "Onboarding.Slide1.Text1".localized.attributed(with: attrs)
+        view.attributedText = "Onboarding.SlideStarted.Text1".localized.attributed(with: attrs)
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view
@@ -82,13 +83,14 @@ private extension OSlide1View {
     
     func makeText2Label() -> UILabel {
         let attrs = TextAttributes()
-            .textColor(UIColor.black)
-            .font(Fonts.SFProDisplay.semiBold(size: 17.scale))
-            .lineHeight(22.scale)
+            .textColor(UIColor.white)
+            .font(Fonts.SFProDisplay.regular(size: 20.scale))
+            .lineHeight(28.scale)
+            .textAlignment(.left)
         
         let view = UILabel()
         view.numberOfLines = 0
-        view.attributedText = "Onboarding.Slide1.Text2".localized.attributed(with: attrs)
+        view.attributedText = "Onboarding.SlideStarted.Text2".localized.attributed(with: attrs)
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view
@@ -97,14 +99,13 @@ private extension OSlide1View {
     func makeButton() -> UIButton {
         let attrs = TextAttributes()
             .textColor(UIColor.white)
-            .font(Fonts.SFProDisplay.semiBold(size: 20.scale))
-            .lineHeight(23.scale)
+            .font(Fonts.SFProDisplay.regular(size: 23.scale))
             .textAlignment(.center)
         
         let view = UIButton()
-        view.backgroundColor = UIColor.green
-        view.layer.cornerRadius = 30.scale
-        view.setAttributedTitle("Onboarding.Slide1.Button".localized.attributed(with: attrs), for: .normal)
+        view.backgroundColor = UIColor(integralRed: 63, green: 166, blue: 255)
+        view.layer.cornerRadius = 15.scale
+        view.setAttributedTitle("Onboarding.SlideStarted.Button".localized.attributed(with: attrs), for: .normal)
         view.addTarget(self, action: #selector(onNext), for: .touchUpInside)
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)

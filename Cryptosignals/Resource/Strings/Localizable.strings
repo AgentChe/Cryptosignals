@@ -15,3 +15,11 @@
 "ImagePicker.CameraRoll" = "Camera roll";
 "ImagePicker.PhotoLibrary" = "Photo library";
 
+// MARK: Onboarding
+"Onboarding.Skip" = "skip";
+"Onboarding.Next" = "Next";
+"Onboarding.Yes" = "Yes";
+"Onboarding.No" = "No";
+"Onboarding.SlideStarted.Text1" = "Crypto signals\nfor maximum gain";
+"Onboarding.SlideStarted.Text2" = "Helping to spot entry and exit\nopportunities";
+"Onboarding.SlideStarted.Button" = "Get started";

@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		278E41CB60A5677C3DB1309C /* Pods_Cryptosignals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBD1C5E0B668C27C22958B9 /* Pods_Cryptosignals.framework */; };
+		9628AF3B264ECF0B00C93AA7 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9628AF18264ECF0B00C93AA7 /* OnboardingViewController.swift */; };
+		9628AF3C264ECF0B00C93AA7 /* OSlideStartedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9628AF1A264ECF0B00C93AA7 /* OSlideStartedView.swift */; };
+		9628AF56264ECF0B00C93AA7 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9628AF37264ECF0B00C93AA7 /* OnboardingView.swift */; };
+		9628AF57264ECF0B00C93AA7 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9628AF38264ECF0B00C93AA7 /* OnboardingViewModel.swift */; };
+		9628AF60264ED6D700C93AA7 /* OSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9628AF5F264ED6D700C93AA7 /* OSlideView.swift */; };
+		9628AF62264FC61D00C93AA7 /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 96991DB1264A8C46008FFC69 /* SF-Pro-Display-Semibold.otf */; };
+		9628AF63264FC61D00C93AA7 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 96991DB0264A8C3F008FFC69 /* SF-Pro-Display-Regular.otf */; };
+		9628AF64264FC61D00C93AA7 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 96991DAF264A8C36008FFC69 /* SF-Pro-Display-Bold.otf */; };
 		96991B93264A89DB008FFC69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96991B92264A89DB008FFC69 /* Assets.xcassets */; };
 		96991CD1264A8AD6008FFC69 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991BC2264A8AD5008FFC69 /* UIColorExtension.swift */; };
 		96991CD2264A8AD6008FFC69 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991BC3264A8AD5008FFC69 /* Collection+Extension.swift */; };
@@ -63,29 +71,6 @@
 		96991D5A264A8AD7008FFC69 /* PaygateMainInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991C80264A8AD5008FFC69 /* PaygateMainInfoCell.swift */; };
 		96991D5B264A8AD7008FFC69 /* PaygateOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991C81264A8AD6008FFC69 /* PaygateOptionView.swift */; };
 		96991D5C264A8AD7008FFC69 /* PaygateSpecialOfferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991C82264A8AD6008FFC69 /* PaygateSpecialOfferView.swift */; };
-		96991D82264A8AD8008FFC69 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991CB6264A8AD6008FFC69 /* OnboardingViewController.swift */; };
-		96991D83264A8AD8008FFC69 /* OSlide5View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991CB8264A8AD6008FFC69 /* OSlide5View.swift */; };
-		96991D84264A8AD8008FFC69 /* OSlide8View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991CB9264A8AD6008FFC69 /* OSlide8View.swift */; };
-		96991D85264A8AD8008FFC69 /* OProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991CBB264A8AD6008FFC69 /* OProgressView.swift */; };
-		96991D86264A8AD8008FFC69 /* OSlide15Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991CBC264A8AD6008FFC69 /* OSlide15Cell.swift */; };
-		96991D87264A8AD8008FFC69 /* Onboarding.Chart.json in Resources */ = {isa = PBXBuildFile; fileRef = 96991CBE264A8AD6008FFC69 /* Onboarding.Chart.json */; };
-		96991D88264A8AD8008FFC69 /* ODatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991CBF264A8AD6008FFC69 /* ODatePicker.swift */; };
-		96991D89264A8AD8008FFC69 /* OSlide4Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991CC0264A8AD6008FFC69 /* OSlide4Cell.swift */; };
-		96991D8A264A8AD8008FFC69 /* OSlide9TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991CC1264A8AD6008FFC69 /* OSlide9TagView.swift */; };
-		96991D8B264A8AD8008FFC69 /* OSlideQuestiionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991CC2264A8AD6008FFC69 /* OSlideQuestiionButton.swift */; };
-		96991D8C264A8AD8008FFC69 /* OSlide6Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991CC3264A8AD6008FFC69 /* OSlide6Cell.swift */; };
-		96991D8D264A8AD8008FFC69 /* OSlide14View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991CC4264A8AD6008FFC69 /* OSlide14View.swift */; };
-		96991D8E264A8AD8008FFC69 /* OSlide4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991CC5264A8AD6008FFC69 /* OSlide4View.swift */; };
-		96991D8F264A8AD8008FFC69 /* OSlide9View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991CC6264A8AD6008FFC69 /* OSlide9View.swift */; };
-		96991D90264A8AD8008FFC69 /* OSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991CC7264A8AD6008FFC69 /* OSlideView.swift */; };
-		96991D91264A8AD8008FFC69 /* OSlideQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991CC8264A8AD6008FFC69 /* OSlideQuestionView.swift */; };
-		96991D92264A8AD8008FFC69 /* OSlide15View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991CC9264A8AD6008FFC69 /* OSlide15View.swift */; };
-		96991D93264A8AD8008FFC69 /* OSlide7View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991CCA264A8AD6008FFC69 /* OSlide7View.swift */; };
-		96991D94264A8AD8008FFC69 /* OSlide1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991CCB264A8AD6008FFC69 /* OSlide1View.swift */; };
-		96991D95264A8AD8008FFC69 /* OSlide6View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991CCC264A8AD6008FFC69 /* OSlide6View.swift */; };
-		96991D96264A8AD8008FFC69 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991CCD264A8AD6008FFC69 /* OnboardingView.swift */; };
-		96991D97264A8AD8008FFC69 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991CCE264A8AD6008FFC69 /* OnboardingViewModel.swift */; };
-		96991D98264A8AD8008FFC69 /* OnboardingAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991CD0264A8AD6008FFC69 /* OnboardingAnalytics.swift */; };
 		96991DA3264A8AEA008FFC69 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96991DA2264A8AEA008FFC69 /* Localizable.strings */; };
 		96991DA9264A8B10008FFC69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96991DA8264A8B10008FFC69 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -93,6 +78,11 @@
 /* Begin PBXFileReference section */
 		83BA09B12C0169ABE8C8302B /* Pods-Cryptosignals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptosignals.debug.xcconfig"; path = "Target Support Files/Pods-Cryptosignals/Pods-Cryptosignals.debug.xcconfig"; sourceTree = "<group>"; };
 		8DBD1C5E0B668C27C22958B9 /* Pods_Cryptosignals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cryptosignals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9628AF18264ECF0B00C93AA7 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		9628AF1A264ECF0B00C93AA7 /* OSlideStartedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSlideStartedView.swift; sourceTree = "<group>"; };
+		9628AF37264ECF0B00C93AA7 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		9628AF38264ECF0B00C93AA7 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		9628AF5F264ED6D700C93AA7 /* OSlideView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSlideView.swift; sourceTree = "<group>"; };
 		96991B86264A89D8008FFC69 /* Cryptosignals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cryptosignals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96991B92264A89DB008FFC69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96991B97264A89DB008FFC69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -150,29 +140,6 @@
 		96991C80264A8AD5008FFC69 /* PaygateMainInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaygateMainInfoCell.swift; sourceTree = "<group>"; };
 		96991C81264A8AD6008FFC69 /* PaygateOptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaygateOptionView.swift; sourceTree = "<group>"; };
 		96991C82264A8AD6008FFC69 /* PaygateSpecialOfferView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaygateSpecialOfferView.swift; sourceTree = "<group>"; };
-		96991CB6264A8AD6008FFC69 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
-		96991CB8264A8AD6008FFC69 /* OSlide5View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSlide5View.swift; sourceTree = "<group>"; };
-		96991CB9264A8AD6008FFC69 /* OSlide8View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSlide8View.swift; sourceTree = "<group>"; };
-		96991CBB264A8AD6008FFC69 /* OProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OProgressView.swift; sourceTree = "<group>"; };
-		96991CBC264A8AD6008FFC69 /* OSlide15Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSlide15Cell.swift; sourceTree = "<group>"; };
-		96991CBE264A8AD6008FFC69 /* Onboarding.Chart.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Onboarding.Chart.json; sourceTree = "<group>"; };
-		96991CBF264A8AD6008FFC69 /* ODatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ODatePicker.swift; sourceTree = "<group>"; };
-		96991CC0264A8AD6008FFC69 /* OSlide4Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSlide4Cell.swift; sourceTree = "<group>"; };
-		96991CC1264A8AD6008FFC69 /* OSlide9TagView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSlide9TagView.swift; sourceTree = "<group>"; };
-		96991CC2264A8AD6008FFC69 /* OSlideQuestiionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSlideQuestiionButton.swift; sourceTree = "<group>"; };
-		96991CC3264A8AD6008FFC69 /* OSlide6Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSlide6Cell.swift; sourceTree = "<group>"; };
-		96991CC4264A8AD6008FFC69 /* OSlide14View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSlide14View.swift; sourceTree = "<group>"; };
-		96991CC5264A8AD6008FFC69 /* OSlide4View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSlide4View.swift; sourceTree = "<group>"; };
-		96991CC6264A8AD6008FFC69 /* OSlide9View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSlide9View.swift; sourceTree = "<group>"; };
-		96991CC7264A8AD6008FFC69 /* OSlideView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSlideView.swift; sourceTree = "<group>"; };
-		96991CC8264A8AD6008FFC69 /* OSlideQuestionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSlideQuestionView.swift; sourceTree = "<group>"; };
-		96991CC9264A8AD6008FFC69 /* OSlide15View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSlide15View.swift; sourceTree = "<group>"; };
-		96991CCA264A8AD6008FFC69 /* OSlide7View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSlide7View.swift; sourceTree = "<group>"; };
-		96991CCB264A8AD6008FFC69 /* OSlide1View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSlide1View.swift; sourceTree = "<group>"; };
-		96991CCC264A8AD6008FFC69 /* OSlide6View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSlide6View.swift; sourceTree = "<group>"; };
-		96991CCD264A8AD6008FFC69 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		96991CCE264A8AD6008FFC69 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
-		96991CD0264A8AD6008FFC69 /* OnboardingAnalytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingAnalytics.swift; sourceTree = "<group>"; };
 		96991DA2264A8AEA008FFC69 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		96991DA5264A8AFC008FFC69 /* Cryptosignals-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cryptosignals-Bridging-Header.h"; sourceTree = "<group>"; };
 		96991DA8264A8B10008FFC69 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -194,6 +161,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9628AF17264ECF0B00C93AA7 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				9628AF19264ECF0B00C93AA7 /* Views */,
+				9628AF18264ECF0B00C93AA7 /* OnboardingViewController.swift */,
+				9628AF37264ECF0B00C93AA7 /* OnboardingView.swift */,
+				9628AF38264ECF0B00C93AA7 /* OnboardingViewModel.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		9628AF19264ECF0B00C93AA7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9628AF1B264ECF0B00C93AA7 /* Atoms */,
+				9628AF1A264ECF0B00C93AA7 /* OSlideStartedView.swift */,
+				9628AF5F264ED6D700C93AA7 /* OSlideView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9628AF1B264ECF0B00C93AA7 /* Atoms */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Atoms;
+			sourceTree = "<group>";
+		};
 		96991B7D264A89D8008FFC69 = {
 			isa = PBXGroup;
 			children = (
@@ -416,9 +411,9 @@
 		96991C33264A8AD5008FFC69 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				9628AF17264ECF0B00C93AA7 /* Onboarding */,
 				96991C42264A8AD5008FFC69 /* Splash */,
 				96991C79264A8AD5008FFC69 /* Paygate */,
-				96991CB5264A8AD6008FFC69 /* Onboarding */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -454,68 +449,6 @@
 				96991C82264A8AD6008FFC69 /* PaygateSpecialOfferView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		96991CB5264A8AD6008FFC69 /* Onboarding */ = {
-			isa = PBXGroup;
-			children = (
-				96991CB6264A8AD6008FFC69 /* OnboardingViewController.swift */,
-				96991CB7264A8AD6008FFC69 /* Views */,
-				96991CCD264A8AD6008FFC69 /* OnboardingView.swift */,
-				96991CCE264A8AD6008FFC69 /* OnboardingViewModel.swift */,
-				96991CCF264A8AD6008FFC69 /* Analytics */,
-			);
-			path = Onboarding;
-			sourceTree = "<group>";
-		};
-		96991CB7264A8AD6008FFC69 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				96991CB8264A8AD6008FFC69 /* OSlide5View.swift */,
-				96991CB9264A8AD6008FFC69 /* OSlide8View.swift */,
-				96991CBA264A8AD6008FFC69 /* Atoms */,
-				96991CC4264A8AD6008FFC69 /* OSlide14View.swift */,
-				96991CC5264A8AD6008FFC69 /* OSlide4View.swift */,
-				96991CC6264A8AD6008FFC69 /* OSlide9View.swift */,
-				96991CC7264A8AD6008FFC69 /* OSlideView.swift */,
-				96991CC8264A8AD6008FFC69 /* OSlideQuestionView.swift */,
-				96991CC9264A8AD6008FFC69 /* OSlide15View.swift */,
-				96991CCA264A8AD6008FFC69 /* OSlide7View.swift */,
-				96991CCB264A8AD6008FFC69 /* OSlide1View.swift */,
-				96991CCC264A8AD6008FFC69 /* OSlide6View.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		96991CBA264A8AD6008FFC69 /* Atoms */ = {
-			isa = PBXGroup;
-			children = (
-				96991CBB264A8AD6008FFC69 /* OProgressView.swift */,
-				96991CBC264A8AD6008FFC69 /* OSlide15Cell.swift */,
-				96991CBD264A8AD6008FFC69 /* Source */,
-				96991CBF264A8AD6008FFC69 /* ODatePicker.swift */,
-				96991CC0264A8AD6008FFC69 /* OSlide4Cell.swift */,
-				96991CC1264A8AD6008FFC69 /* OSlide9TagView.swift */,
-				96991CC2264A8AD6008FFC69 /* OSlideQuestiionButton.swift */,
-				96991CC3264A8AD6008FFC69 /* OSlide6Cell.swift */,
-			);
-			path = Atoms;
-			sourceTree = "<group>";
-		};
-		96991CBD264A8AD6008FFC69 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				96991CBE264A8AD6008FFC69 /* Onboarding.Chart.json */,
-			);
-			path = Source;
-			sourceTree = "<group>";
-		};
-		96991CCF264A8AD6008FFC69 /* Analytics */ = {
-			isa = PBXGroup;
-			children = (
-				96991CD0264A8AD6008FFC69 /* OnboardingAnalytics.swift */,
-			);
-			path = Analytics;
 			sourceTree = "<group>";
 		};
 		96991D99264A8AE4008FFC69 /* Fonts */ = {
@@ -620,7 +553,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96991D87264A8AD8008FFC69 /* Onboarding.Chart.json in Resources */,
+				9628AF62264FC61D00C93AA7 /* SF-Pro-Display-Semibold.otf in Resources */,
+				9628AF63264FC61D00C93AA7 /* SF-Pro-Display-Regular.otf in Resources */,
+				9628AF64264FC61D00C93AA7 /* SF-Pro-Display-Bold.otf in Resources */,
 				96991DA3264A8AEA008FFC69 /* Localizable.strings in Resources */,
 				96991DA9264A8B10008FFC69 /* LaunchScreen.storyboard in Resources */,
 				96991B93264A89DB008FFC69 /* Assets.xcassets in Resources */,
@@ -680,7 +615,6 @@
 				96991CEF264A8AD6008FFC69 /* MonetizationManager.swift in Sources */,
 				96991D58264A8AD7008FFC69 /* PaygateViewController.swift in Sources */,
 				96991CE8264A8AD6008FFC69 /* AppDelegate.swift in Sources */,
-				96991D8F264A8AD8008FFC69 /* OSlide9View.swift in Sources */,
 				96991CF1264A8AD6008FFC69 /* GetMonetizationResponseMapper.swift in Sources */,
 				96991CF4264A8AD6008FFC69 /* ProductPrice.swift in Sources */,
 				96991CF8264A8AD6008FFC69 /* GetPaygateRequest.swift in Sources */,
@@ -689,33 +623,24 @@
 				96991D5A264A8AD7008FFC69 /* PaygateMainInfoCell.swift in Sources */,
 				96991CF9264A8AD6008FFC69 /* GetMonetizationConfigRequest.swift in Sources */,
 				96991D5B264A8AD7008FFC69 /* PaygateOptionView.swift in Sources */,
+				9628AF3C264ECF0B00C93AA7 /* OSlideStartedView.swift in Sources */,
 				96991CDA264A8AD6008FFC69 /* ScreenSize.swift in Sources */,
-				96991D89264A8AD8008FFC69 /* OSlide4Cell.swift in Sources */,
 				96991CDC264A8AD6008FFC69 /* SignError.swift in Sources */,
-				96991D8D264A8AD8008FFC69 /* OSlide14View.swift in Sources */,
 				96991D57264A8AD7008FFC69 /* PaygateView.swift in Sources */,
 				96991D2D264A8AD7008FFC69 /* SplashViewModel.swift in Sources */,
 				96991CFA264A8AD6008FFC69 /* MonetizationManagerCore.swift in Sources */,
 				96991D20264A8AD7008FFC69 /* SessionManagerCore.swift in Sources */,
 				96991CE0264A8AD6008FFC69 /* NursingNavigationController.swift in Sources */,
+				9628AF60264ED6D700C93AA7 /* OSlideView.swift in Sources */,
 				96991CD8264A8AD6008FFC69 /* Scalable.swift in Sources */,
 				96991CF7264A8AD6008FFC69 /* PaygateSpecialOffer.swift in Sources */,
 				96991CF5264A8AD6008FFC69 /* Paygate.swift in Sources */,
-				96991D97264A8AD8008FFC69 /* OnboardingViewModel.swift in Sources */,
-				96991D92264A8AD8008FFC69 /* OSlide15View.swift in Sources */,
 				96991CDE264A8AD6008FFC69 /* ImagePicker.swift in Sources */,
-				96991D95264A8AD8008FFC69 /* OSlide6View.swift in Sources */,
-				96991D85264A8AD8008FFC69 /* OProgressView.swift in Sources */,
 				96991CE6264A8AD6008FFC69 /* CircleView.swift in Sources */,
-				96991D8A264A8AD8008FFC69 /* OSlide9TagView.swift in Sources */,
-				96991D8B264A8AD8008FFC69 /* OSlideQuestiionButton.swift in Sources */,
-				96991D8C264A8AD8008FFC69 /* OSlide6Cell.swift in Sources */,
 				96991D56264A8AD7008FFC69 /* PaygateViewControllerDelegate.swift in Sources */,
-				96991D86264A8AD8008FFC69 /* OSlide15Cell.swift in Sources */,
 				96991CDD264A8AD6008FFC69 /* Weak.swift in Sources */,
 				96991D2C264A8AD7008FFC69 /* SplashViewController.swift in Sources */,
-				96991D96264A8AD8008FFC69 /* OnboardingView.swift in Sources */,
-				96991D82264A8AD8008FFC69 /* OnboardingViewController.swift in Sources */,
+				9628AF56264ECF0B00C93AA7 /* OnboardingView.swift in Sources */,
 				96991CE5264A8AD6008FFC69 /* GradientButton.swift in Sources */,
 				96991CE3264A8AD6008FFC69 /* PaddingLabel.swift in Sources */,
 				96991D2E264A8AD7008FFC69 /* SplashView.swift in Sources */,
@@ -726,32 +651,25 @@
 				96991CF3264A8AD6008FFC69 /* MonetizationConfig.swift in Sources */,
 				96991CDF264A8AD6008FFC69 /* Toast.swift in Sources */,
 				96991CD6264A8AD6008FFC69 /* StringExtension.swift in Sources */,
-				96991D90264A8AD8008FFC69 /* OSlideView.swift in Sources */,
 				96991CD1264A8AD6008FFC69 /* UIColorExtension.swift in Sources */,
 				96991D59264A8AD7008FFC69 /* PaygateMainView.swift in Sources */,
 				96991D1F264A8AD7008FFC69 /* Session.swift in Sources */,
 				96991D55264A8AD7008FFC69 /* PaygateViewModel.swift in Sources */,
 				96991CD9264A8AD6008FFC69 /* TextAttributes.swift in Sources */,
+				9628AF57264ECF0B00C93AA7 /* OnboardingViewModel.swift in Sources */,
+				9628AF3B264ECF0B00C93AA7 /* OnboardingViewController.swift in Sources */,
 				96991CD5264A8AD6008FFC69 /* UIEdgeInsets+Extension.swift in Sources */,
-				96991D84264A8AD8008FFC69 /* OSlide8View.swift in Sources */,
 				96991CEE264A8AD6008FFC69 /* PaygateManagerCore.swift in Sources */,
 				96991D5C264A8AD7008FFC69 /* PaygateSpecialOfferView.swift in Sources */,
 				96991D21264A8AD7008FFC69 /* SessionManager.swift in Sources */,
 				96991CDB264A8AD6008FFC69 /* Fonts.swift in Sources */,
-				96991D91264A8AD8008FFC69 /* OSlideQuestionView.swift in Sources */,
-				96991D98264A8AD8008FFC69 /* OnboardingAnalytics.swift in Sources */,
 				96991CE9264A8AD6008FFC69 /* RxActivityIndicator.swift in Sources */,
 				96991CD7264A8AD6008FFC69 /* GlobalDefinitions.swift in Sources */,
-				96991D93264A8AD8008FFC69 /* OSlide7View.swift in Sources */,
 				96991CE4264A8AD6008FFC69 /* PaddingPickerView.swift in Sources */,
 				96991CF6264A8AD6008FFC69 /* PaygateMainOffer.swift in Sources */,
 				96991CF0264A8AD6008FFC69 /* PaygateMapper.swift in Sources */,
-				96991D83264A8AD8008FFC69 /* OSlide5View.swift in Sources */,
-				96991D88264A8AD8008FFC69 /* ODatePicker.swift in Sources */,
-				96991D8E264A8AD8008FFC69 /* OSlide4View.swift in Sources */,
 				96991CFB264A8AD6008FFC69 /* PaygateManager.swift in Sources */,
 				96991CD2264A8AD6008FFC69 /* Collection+Extension.swift in Sources */,
-				96991D94264A8AD8008FFC69 /* OSlide1View.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

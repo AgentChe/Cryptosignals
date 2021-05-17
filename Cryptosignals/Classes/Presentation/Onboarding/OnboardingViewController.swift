@@ -36,15 +36,7 @@ final class OnboardingViewController: UIViewController {
             this.goToNext()
         }
         
-        mainView.didChangedSlide = { [weak self] step in
-            guard let this = self else {
-                return
-            }
-            
-            if step == .slide1 {
-                this.goToCourses()
-            }
-        }
+        addSkipAction()
     }
 }
 
@@ -54,7 +46,6 @@ extension OnboardingViewController {
         OnboardingViewController()
     }
 }
-
 
 // MARK: API
 extension OnboardingViewController {
@@ -66,7 +57,7 @@ extension OnboardingViewController {
 // MARK: PaygateViewControllerDelegate
 extension OnboardingViewController: PaygateViewControllerDelegate {
     func paygateDidClosed(with result: PaygateViewControllerResult) {
-        goToCourseOrCourses()
+        goToMain()
     }
 }
 
@@ -85,20 +76,24 @@ private extension OnboardingViewController {
             let vc = PaygateViewController.make()
             vc.delegate = self
             present(vc, animated: true)
-        case .nextScreen:
-            goToCourseOrCourses()
+        case .main:
+            goToMain()
         }
     }
     
-    func goToCourseOrCourses() {
-        viewModel.hasSelectedCourse ? goToCourse() : goToCourses()
+    func addSkipAction() {
+        mainView.skipButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                guard let self = self else {
+                    return
+                }
+                
+                self.mainView.slideViewDidNext(from: self.mainView.step)
+            })
+            .disposed(by: disposeBag)
     }
     
-    func goToCourses() {
-        
-    }
-    
-    func goToCourse() {
+    func goToMain() {
         
     }
 }
