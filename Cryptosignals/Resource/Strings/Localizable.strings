@@ -43,3 +43,5 @@
 "Onboarding.Currencies.ErrorToSave" = "Failed to save currencies";
 "Onboarding.Exchanges.Title" = "What exchanges should we track?";
 "Onboarding.Exchanges.ErrorToSave" = "Failed to save exchanges";
+"Onboarding.Risk.Title" = "Pick your risk-reward ratio";
+"Onboarding.Risk.SubTitle" = "It used to assess the profit potential of a trade relative to its potential loss";

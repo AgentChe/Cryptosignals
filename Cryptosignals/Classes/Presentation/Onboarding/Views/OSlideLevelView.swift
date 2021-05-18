@@ -155,4 +155,3 @@ private extension OSlideLevelView {
         return view
     }
 }
-
