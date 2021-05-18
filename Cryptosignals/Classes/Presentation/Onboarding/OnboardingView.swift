@@ -9,7 +9,7 @@ import UIKit
 
 final class OnboardingView: UIView {
     enum Step: Int {
-        case started, level
+        case started, level, interest
     }
     
     var didFinish: (() -> Void)?
@@ -29,7 +29,8 @@ final class OnboardingView: UIView {
     private lazy var contentViews: [OSlideView] = {
         [
             OSlideStartedView(step: .started),
-            OSlideLevelView(step: .level)
+            OSlideLevelView(step: .level),
+            OSlideInterestView(step: .interest)
         ]
     }()
     
@@ -110,7 +111,7 @@ private extension OnboardingView {
         }
         
         let progressCases: [Step] = [
-            .level
+            .level, .interest
         ]
         guard let index = progressCases.firstIndex(of: step) else {
             return

@@ -32,3 +32,10 @@
 "Onboarding.Level.SubTitle3" = "I have advanced knowledge in trading and I want to improve it";
 "Onboarding.Level.Title4" = "Expert";
 "Onboarding.Level.SubTitle4" = "I know pretty everything about cryptocurrency trading";
+"Onboarding.Interest.Title" = "What’s your interest?";
+"Onboarding.Interest.Tag1" = "Find promising\ncryptocurrency";
+"Onboarding.Interest.Tag2" = "Cross\ntrades";
+"Onboarding.Interest.Tag3" = "Short-term\ntrading";
+"Onboarding.Interest.Tag4" = "Crypto\nnews";
+"Onboarding.Interest.Tag5" = "Gain\nexperience";
+"Onboarding.Interest.Tag6" = "Long-term\ninvestments";
