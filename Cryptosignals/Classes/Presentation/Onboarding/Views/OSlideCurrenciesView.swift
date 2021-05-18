@@ -108,7 +108,7 @@ private extension OSlideCurrenciesView {
         NSLayoutConstraint.activate([
             currenciesView.leadingAnchor.constraint(equalTo: leadingAnchor),
             currenciesView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            currenciesView.bottomAnchor.constraint(equalTo: button.topAnchor, constant: -107.scale),
+            currenciesView.bottomAnchor.constraint(equalTo: button.topAnchor, constant: ScreenSize.isIphoneXFamily ? -107.scale : -40.scale),
             currenciesView.heightAnchor.constraint(equalToConstant: 352.scale)
         ])
         
