@@ -165,4 +165,3 @@ private extension OSlideCurrenciesView {
         return view
     }
 }
-

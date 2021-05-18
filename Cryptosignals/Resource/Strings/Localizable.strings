@@ -41,3 +41,5 @@
 "Onboarding.Interest.Tag6" = "Long-term\ninvestments";
 "Onboarding.Currencies.Title" = "What currencies should we track for you?";
 "Onboarding.Currencies.ErrorToSave" = "Failed to save currencies";
+"Onboarding.Exchanges.Title" = "What exchanges should we track?";
+"Onboarding.Exchanges.ErrorToSave" = "Failed to save exchanges";

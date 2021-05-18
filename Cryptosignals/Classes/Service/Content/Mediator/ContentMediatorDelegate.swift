@@ -7,4 +7,5 @@
 
 protocol ContentMediatorDelegate: class {
     func contentMediatorDidUpdate(selectedCurrenciesIds: [Int])
+    func contentMediatorDidUpdate(selectedExchangesIds: [Int])
 }

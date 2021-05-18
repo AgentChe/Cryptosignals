@@ -15,6 +15,7 @@ final class ContentMediator {
     private init() {}
     
     private lazy var updateSelectedCurrenciesIdsTrigger = PublishRelay<[Int]>()
+    private lazy var updateSelectedExchangesIdsTrigger = PublishRelay<[Int]>()
 }
 
 // MARK: API
@@ -28,12 +29,26 @@ extension ContentMediator {
             self?.updateSelectedCurrenciesIdsTrigger.accept(selectedCurrenciesIds)
         }
     }
+    
+    func notifyAboutUpdate(selectedExchangesIds: [Int]) {
+        DispatchQueue.main.async { [weak self] in
+            ContentMediator.shared.delegates.forEach {
+                $0.weak?.contentMediatorDidUpdate(selectedExchangesIds: selectedExchangesIds)
+            }
+            
+            self?.updateSelectedExchangesIdsTrigger.accept(selectedExchangesIds)
+        }
+    }
 }
 
 // MARK: Triggers(Rx)
 extension ContentMediator {
     var rxDidUpdateSelectedCurrenciesIds: Signal<[Int]> {
         updateSelectedCurrenciesIdsTrigger.asSignal()
+    }
+    
+    var rxDidUpdateSelectedExchangesIds: Signal<[Int]> {
+        updateSelectedExchangesIdsTrigger.asSignal()
     }
 }
 

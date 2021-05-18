@@ -37,6 +37,14 @@
 		966E367E2653D11600FB011D /* GetContentResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966E367D2653D11600FB011D /* GetContentResponseMapper.swift */; };
 		966E369F2653E18B00FB011D /* ContentMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966E369E2653E18B00FB011D /* ContentMediator.swift */; };
 		966E36A22653E1DF00FB011D /* ContentMediatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966E36A12653E1DF00FB011D /* ContentMediatorDelegate.swift */; };
+		966E36AE2653ED4700FB011D /* Exchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966E36AD2653ED4700FB011D /* Exchange.swift */; };
+		966E36B22653ED8200FB011D /* GetExchangesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966E36B12653ED8200FB011D /* GetExchangesRequest.swift */; };
+		966E36B52653EDBE00FB011D /* GetExchangesResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966E36B42653EDBE00FB011D /* GetExchangesResponseMapper.swift */; };
+		966E36B82653EF5700FB011D /* SaveSelectedExchangesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966E36B72653EF5700FB011D /* SaveSelectedExchangesRequest.swift */; };
+		966E36BB2653EFC000FB011D /* OSlideExchangesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966E36BA2653EFC000FB011D /* OSlideExchangesView.swift */; };
+		966E36BF2653F12E00FB011D /* ExchangesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966E36BE2653F12E00FB011D /* ExchangesCollectionView.swift */; };
+		966E36C22653F15D00FB011D /* ExchangesCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966E36C12653F15D00FB011D /* ExchangesCollectionCell.swift */; };
+		966E36C52653F1BC00FB011D /* ExchangesCollectionElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966E36C42653F1BC00FB011D /* ExchangesCollectionElement.swift */; };
 		96991B93264A89DB008FFC69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96991B92264A89DB008FFC69 /* Assets.xcassets */; };
 		96991CD1264A8AD6008FFC69 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991BC2264A8AD5008FFC69 /* UIColorExtension.swift */; };
 		96991CD2264A8AD6008FFC69 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991BC3264A8AD5008FFC69 /* Collection+Extension.swift */; };
@@ -121,6 +129,14 @@
 		966E367D2653D11600FB011D /* GetContentResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetContentResponseMapper.swift; sourceTree = "<group>"; };
 		966E369E2653E18B00FB011D /* ContentMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentMediator.swift; sourceTree = "<group>"; };
 		966E36A12653E1DF00FB011D /* ContentMediatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentMediatorDelegate.swift; sourceTree = "<group>"; };
+		966E36AD2653ED4700FB011D /* Exchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exchange.swift; sourceTree = "<group>"; };
+		966E36B12653ED8200FB011D /* GetExchangesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetExchangesRequest.swift; sourceTree = "<group>"; };
+		966E36B42653EDBE00FB011D /* GetExchangesResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetExchangesResponseMapper.swift; sourceTree = "<group>"; };
+		966E36B72653EF5700FB011D /* SaveSelectedExchangesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveSelectedExchangesRequest.swift; sourceTree = "<group>"; };
+		966E36BA2653EFC000FB011D /* OSlideExchangesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSlideExchangesView.swift; sourceTree = "<group>"; };
+		966E36BE2653F12E00FB011D /* ExchangesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangesCollectionView.swift; sourceTree = "<group>"; };
+		966E36C12653F15D00FB011D /* ExchangesCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangesCollectionCell.swift; sourceTree = "<group>"; };
+		966E36C42653F1BC00FB011D /* ExchangesCollectionElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangesCollectionElement.swift; sourceTree = "<group>"; };
 		96991B86264A89D8008FFC69 /* Cryptosignals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cryptosignals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96991B92264A89DB008FFC69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96991B97264A89DB008FFC69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -215,6 +231,7 @@
 				9628B6262652981700C93AA7 /* OSlideLevelView.swift */,
 				966E364126539ADD00FB011D /* OSlideInterestView.swift */,
 				966E36472653A79400FB011D /* OSlideCurrenciesView.swift */,
+				966E36BA2653EFC000FB011D /* OSlideExchangesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -222,6 +239,7 @@
 		9628AF1B264ECF0B00C93AA7 /* Atoms */ = {
 			isa = PBXGroup;
 			children = (
+				966E36BD2653F10B00FB011D /* ExchangesCollection */,
 				966E36602653C5C200FB011D /* CurrenciesCollection */,
 				9628B6232652943700C93AA7 /* OLevelCell.swift */,
 				966E364426539B2500FB011D /* OInterestCell.swift */,
@@ -245,6 +263,7 @@
 			children = (
 				966E364C2653AD3B00FB011D /* Currency.swift */,
 				966E36752653D01000FB011D /* Content.swift */,
+				966E36AD2653ED4700FB011D /* Exchange.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -261,9 +280,11 @@
 		966E36502653AD9100FB011D /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				966E36B02653ED7300FB011D /* GetExchanges */,
 				966E36782653D0AD00FB011D /* GetContent */,
 				966E36512653AD9C00FB011D /* GetCurrencies */,
 				966E366F2653CD8800FB011D /* SaveSelectedCurrenciesRequest.swift */,
+				966E36B72653EF5700FB011D /* SaveSelectedExchangesRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -304,6 +325,25 @@
 				966E36A12653E1DF00FB011D /* ContentMediatorDelegate.swift */,
 			);
 			path = Mediator;
+			sourceTree = "<group>";
+		};
+		966E36B02653ED7300FB011D /* GetExchanges */ = {
+			isa = PBXGroup;
+			children = (
+				966E36B12653ED8200FB011D /* GetExchangesRequest.swift */,
+				966E36B42653EDBE00FB011D /* GetExchangesResponseMapper.swift */,
+			);
+			path = GetExchanges;
+			sourceTree = "<group>";
+		};
+		966E36BD2653F10B00FB011D /* ExchangesCollection */ = {
+			isa = PBXGroup;
+			children = (
+				966E36BE2653F12E00FB011D /* ExchangesCollectionView.swift */,
+				966E36C12653F15D00FB011D /* ExchangesCollectionCell.swift */,
+				966E36C42653F1BC00FB011D /* ExchangesCollectionElement.swift */,
+			);
+			path = ExchangesCollection;
 			sourceTree = "<group>";
 		};
 		96991B7D264A89D8008FFC69 = {
@@ -746,16 +786,20 @@
 				96991D2D264A8AD7008FFC69 /* SplashViewModel.swift in Sources */,
 				96991D20264A8AD7008FFC69 /* SessionManagerCore.swift in Sources */,
 				966E364D2653AD3B00FB011D /* Currency.swift in Sources */,
+				966E36B82653EF5700FB011D /* SaveSelectedExchangesRequest.swift in Sources */,
 				96991CE0264A8AD6008FFC69 /* NursingNavigationController.swift in Sources */,
 				966E36652653C5C200FB011D /* CurrenciesCollectionLayout.swift in Sources */,
+				966E36C22653F15D00FB011D /* ExchangesCollectionCell.swift in Sources */,
 				9628AF60264ED6D700C93AA7 /* OSlideView.swift in Sources */,
 				96991CD8264A8AD6008FFC69 /* Scalable.swift in Sources */,
 				96991CF7264A8AD6008FFC69 /* PaygateSpecialOffer.swift in Sources */,
 				96991CF5264A8AD6008FFC69 /* Paygate.swift in Sources */,
 				96991CDE264A8AD6008FFC69 /* ImagePicker.swift in Sources */,
+				966E36AE2653ED4700FB011D /* Exchange.swift in Sources */,
 				96991CE6264A8AD6008FFC69 /* CircleView.swift in Sources */,
 				96991D56264A8AD7008FFC69 /* PaygateViewControllerDelegate.swift in Sources */,
 				96991CDD264A8AD6008FFC69 /* Weak.swift in Sources */,
+				966E36BB2653EFC000FB011D /* OSlideExchangesView.swift in Sources */,
 				96991D2C264A8AD7008FFC69 /* SplashViewController.swift in Sources */,
 				966E367A2653D0C100FB011D /* GetContentRequest.swift in Sources */,
 				9628AF56264ECF0B00C93AA7 /* OnboardingView.swift in Sources */,
@@ -770,7 +814,9 @@
 				966E36662653C5C200FB011D /* CurrenciesCollectionElement.swift in Sources */,
 				96991CD4264A8AD6008FFC69 /* UIDeviceExtension.swift in Sources */,
 				96991CDF264A8AD6008FFC69 /* Toast.swift in Sources */,
+				966E36B22653ED8200FB011D /* GetExchangesRequest.swift in Sources */,
 				96991CD6264A8AD6008FFC69 /* StringExtension.swift in Sources */,
+				966E36BF2653F12E00FB011D /* ExchangesCollectionView.swift in Sources */,
 				96991CD1264A8AD6008FFC69 /* UIColorExtension.swift in Sources */,
 				96991D59264A8AD7008FFC69 /* PaygateMainView.swift in Sources */,
 				96991D1F264A8AD7008FFC69 /* Session.swift in Sources */,
@@ -786,6 +832,7 @@
 				96991CEE264A8AD6008FFC69 /* PaygateManagerCore.swift in Sources */,
 				966E364526539B2500FB011D /* OInterestCell.swift in Sources */,
 				96991D5C264A8AD7008FFC69 /* PaygateSpecialOfferView.swift in Sources */,
+				966E36C52653F1BC00FB011D /* ExchangesCollectionElement.swift in Sources */,
 				96991D21264A8AD7008FFC69 /* SessionManager.swift in Sources */,
 				96991CDB264A8AD6008FFC69 /* Fonts.swift in Sources */,
 				966E36702653CD8800FB011D /* SaveSelectedCurrenciesRequest.swift in Sources */,
@@ -796,6 +843,7 @@
 				96991CE4264A8AD6008FFC69 /* PaddingPickerView.swift in Sources */,
 				96991CF6264A8AD6008FFC69 /* PaygateMainOffer.swift in Sources */,
 				966E369F2653E18B00FB011D /* ContentMediator.swift in Sources */,
+				966E36B52653EDBE00FB011D /* GetExchangesResponseMapper.swift in Sources */,
 				966E36762653D01000FB011D /* Content.swift in Sources */,
 				96991CF0264A8AD6008FFC69 /* PaygateMapper.swift in Sources */,
 				96991CFB264A8AD6008FFC69 /* PaygateManager.swift in Sources */,

@@ -12,6 +12,10 @@ protocol ContentManager: class {
     func retrieveCurrencies(forceUpdate: Bool) -> Single<[Currency]>
     func saveSelected(currenciesIds: [Int]) -> Single<Bool>
     
+    // MARK: Exchange
+    func retrieveExchanges(forceUpdate: Bool) -> Single<[Exchange]>
+    func saveSelected(exchangesIds: [Int]) -> Single<Bool>
+    
     // MARK: Content
     func obtainContent() -> Single<Content?>
 }
