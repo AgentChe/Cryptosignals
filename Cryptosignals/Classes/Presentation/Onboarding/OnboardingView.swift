@@ -9,7 +9,7 @@ import UIKit
 
 final class OnboardingView: UIView {
     enum Step: Int {
-        case started
+        case started, level
     }
     
     var didFinish: (() -> Void)?
@@ -28,7 +28,8 @@ final class OnboardingView: UIView {
     
     private lazy var contentViews: [OSlideView] = {
         [
-            OSlideStartedView(step: .started)
+            OSlideStartedView(step: .started),
+            OSlideLevelView(step: .level)
         ]
     }()
     
@@ -109,7 +110,7 @@ private extension OnboardingView {
         }
         
         let progressCases: [Step] = [
-            
+            .level
         ]
         guard let index = progressCases.firstIndex(of: step) else {
             return
@@ -170,7 +171,7 @@ private extension OnboardingView {
     func makeSkipButton() -> UIButton {
         let attrs = TextAttributes()
             .textColor(UIColor.white)
-            .font(Fonts.SFProDisplay.regular(size: 18.scale))
+            .font(Fonts.SFProDisplay.semiBold(size: 17.scale))
         
         let view = UIButton()
         view.setAttributedTitle("Onboarding.Skip".localized.attributed(with: attrs), for: .normal)

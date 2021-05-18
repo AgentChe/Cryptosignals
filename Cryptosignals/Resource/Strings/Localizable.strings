@@ -23,3 +23,12 @@
 "Onboarding.SlideStarted.Text1" = "Crypto signals\nfor maximum gain";
 "Onboarding.SlideStarted.Text2" = "Helping to spot entry and exit\nopportunities";
 "Onboarding.SlideStarted.Button" = "Get started";
+"Onboarding.Level.Title" = "What’s your level? How risky we can play?";
+"Onboarding.Level.Title1" = "Novice";
+"Onboarding.Level.SubTitle1" = "I have no/little experience in trading";
+"Onboarding.Level.Title2" = "Amateur";
+"Onboarding.Level.SubTitle2" = "I understand basic principles of trading";
+"Onboarding.Level.Title3" = "Experienced";
+"Onboarding.Level.SubTitle3" = "I have advanced knowledge in trading and I want to improve it";
+"Onboarding.Level.Title4" = "Expert";
+"Onboarding.Level.SubTitle4" = "I know pretty everything about cryptocurrency trading";

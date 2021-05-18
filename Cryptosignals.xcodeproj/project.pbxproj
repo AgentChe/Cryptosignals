@@ -16,6 +16,8 @@
 		9628AF62264FC61D00C93AA7 /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 96991DB1264A8C46008FFC69 /* SF-Pro-Display-Semibold.otf */; };
 		9628AF63264FC61D00C93AA7 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 96991DB0264A8C3F008FFC69 /* SF-Pro-Display-Regular.otf */; };
 		9628AF64264FC61D00C93AA7 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 96991DAF264A8C36008FFC69 /* SF-Pro-Display-Bold.otf */; };
+		9628B6242652943700C93AA7 /* OLevelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9628B6232652943700C93AA7 /* OLevelCell.swift */; };
+		9628B6272652981700C93AA7 /* OSlideLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9628B6262652981700C93AA7 /* OSlideLevelView.swift */; };
 		96991B93264A89DB008FFC69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96991B92264A89DB008FFC69 /* Assets.xcassets */; };
 		96991CD1264A8AD6008FFC69 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991BC2264A8AD5008FFC69 /* UIColorExtension.swift */; };
 		96991CD2264A8AD6008FFC69 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991BC3264A8AD5008FFC69 /* Collection+Extension.swift */; };
@@ -83,6 +85,8 @@
 		9628AF37264ECF0B00C93AA7 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		9628AF38264ECF0B00C93AA7 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		9628AF5F264ED6D700C93AA7 /* OSlideView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSlideView.swift; sourceTree = "<group>"; };
+		9628B6232652943700C93AA7 /* OLevelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OLevelCell.swift; sourceTree = "<group>"; };
+		9628B6262652981700C93AA7 /* OSlideLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSlideLevelView.swift; sourceTree = "<group>"; };
 		96991B86264A89D8008FFC69 /* Cryptosignals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cryptosignals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96991B92264A89DB008FFC69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96991B97264A89DB008FFC69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -178,6 +182,7 @@
 				9628AF1B264ECF0B00C93AA7 /* Atoms */,
 				9628AF1A264ECF0B00C93AA7 /* OSlideStartedView.swift */,
 				9628AF5F264ED6D700C93AA7 /* OSlideView.swift */,
+				9628B6262652981700C93AA7 /* OSlideLevelView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 		9628AF1B264ECF0B00C93AA7 /* Atoms */ = {
 			isa = PBXGroup;
 			children = (
+				9628B6232652943700C93AA7 /* OLevelCell.swift */,
 			);
 			path = Atoms;
 			sourceTree = "<group>";
@@ -617,6 +623,7 @@
 				96991CE8264A8AD6008FFC69 /* AppDelegate.swift in Sources */,
 				96991CF1264A8AD6008FFC69 /* GetMonetizationResponseMapper.swift in Sources */,
 				96991CF4264A8AD6008FFC69 /* ProductPrice.swift in Sources */,
+				9628B6242652943700C93AA7 /* OLevelCell.swift in Sources */,
 				96991CF8264A8AD6008FFC69 /* GetPaygateRequest.swift in Sources */,
 				96991CE2264A8AD6008FFC69 /* TapAreaButton.swift in Sources */,
 				96991CE7264A8AD6008FFC69 /* GradientView.swift in Sources */,
@@ -659,6 +666,7 @@
 				9628AF57264ECF0B00C93AA7 /* OnboardingViewModel.swift in Sources */,
 				9628AF3B264ECF0B00C93AA7 /* OnboardingViewController.swift in Sources */,
 				96991CD5264A8AD6008FFC69 /* UIEdgeInsets+Extension.swift in Sources */,
+				9628B6272652981700C93AA7 /* OSlideLevelView.swift in Sources */,
 				96991CEE264A8AD6008FFC69 /* PaygateManagerCore.swift in Sources */,
 				96991D5C264A8AD7008FFC69 /* PaygateSpecialOfferView.swift in Sources */,
 				96991D21264A8AD7008FFC69 /* SessionManager.swift in Sources */,
