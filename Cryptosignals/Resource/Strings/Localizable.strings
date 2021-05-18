@@ -39,3 +39,5 @@
 "Onboarding.Interest.Tag4" = "Crypto\nnews";
 "Onboarding.Interest.Tag5" = "Gain\nexperience";
 "Onboarding.Interest.Tag6" = "Long-term\ninvestments";
+"Onboarding.Currencies.Title" = "What currencies should we track for you?";
+"Onboarding.Currencies.ErrorToSave" = "Failed to save currencies";

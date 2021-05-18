@@ -13,7 +13,7 @@ final class SplashViewModel {
         case onboarding, courses, course, paygate
     }
     
-    private lazy var monetizationManager = MonetizationManagerCore()
+    private lazy var contentManager = ContentManagerCore()
     private lazy var sessionManager = SessionManagerCore()
     
     func step() -> Driver<Step> {
@@ -35,9 +35,9 @@ final class SplashViewModel {
 // MARK: Private
 private extension SplashViewModel {
     func library() -> Completable {
-        monetizationManager
-            .rxRetrieveMonetizationConfig(forceUpdate: true)
-            .catchAndReturn(nil)
+        contentManager
+            .retrieveCurrencies(forceUpdate: true)
+            .catchAndReturn([])
             .asCompletable()
     }
     
