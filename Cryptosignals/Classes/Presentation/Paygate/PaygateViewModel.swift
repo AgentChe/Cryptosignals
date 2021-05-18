@@ -26,22 +26,12 @@ final class PaygateViewModel {
     
     private lazy var paygateManager = PaygateManagerCore()
     private lazy var purchaseInteractor = SDKStorage.shared.purchaseInteractor
-    private lazy var monetizatiionManager = MonetizationManagerCore()
 }
 
 // MARK: Monetization
 extension PaygateViewModel {
     func monetizationConfig() -> Driver<Config> {
-        guard let conf = monetizatiionManager.getMonetizationConfig() else {
-            return .deferred { .just(.suggest) }
-        }
-        
-        switch conf {
-        case .block:
-            return .deferred { .just(.block) }
-        case .suggest:
-            return .deferred { .just(.suggest) }
-        }
+        .deferred { .just(.suggest) }
     }
 }
 

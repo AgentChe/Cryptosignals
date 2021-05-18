@@ -56,13 +56,6 @@ extension OnboardingViewController {
     }
 }
 
-// MARK: PaygateViewControllerDelegate
-extension OnboardingViewController: PaygateViewControllerDelegate {
-    func paygateDidClosed(with result: PaygateViewControllerResult) {
-        goToMain()
-    }
-}
-
 // MARK: Private
 private extension OnboardingViewController {
     func markAsViewed() {
@@ -70,17 +63,7 @@ private extension OnboardingViewController {
     }
     
     func goToNext() {
-        switch viewModel.whatNext() {
-        case .paygateBlock:
-            let vc = PaygateViewController.make()
-            present(vc, animated: true)
-        case .paygateSuggest:
-            let vc = PaygateViewController.make()
-            vc.delegate = self
-            present(vc, animated: true)
-        case .main:
-            goToMain()
-        }
+        
     }
     
     func addSkipAction() {
@@ -93,9 +76,5 @@ private extension OnboardingViewController {
                 self.mainView.slideViewDidNext(from: self.mainView.step)
             })
             .disposed(by: disposeBag)
-    }
-    
-    func goToMain() {
-        
     }
 }
