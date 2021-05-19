@@ -99,6 +99,8 @@
 		96991D5C264A8AD7008FFC69 /* PaygateSpecialOfferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991C82264A8AD6008FFC69 /* PaygateSpecialOfferView.swift */; };
 		96991DA3264A8AEA008FFC69 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96991DA2264A8AEA008FFC69 /* Localizable.strings */; };
 		96991DA9264A8B10008FFC69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96991DA8264A8B10008FFC69 /* LaunchScreen.storyboard */; };
+		96F44DA826551F0100B63D53 /* OSlideStrategiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F44DA726551F0100B63D53 /* OSlideStrategiesView.swift */; };
+		96F44DAB26551F2500B63D53 /* OStrategyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F44DAA26551F2500B63D53 /* OStrategyCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -198,6 +200,8 @@
 		96991DAF264A8C36008FFC69 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
 		96991DB0264A8C3F008FFC69 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
 		96991DB1264A8C46008FFC69 /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
+		96F44DA726551F0100B63D53 /* OSlideStrategiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSlideStrategiesView.swift; sourceTree = "<group>"; };
+		96F44DAA26551F2500B63D53 /* OStrategyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OStrategyCell.swift; sourceTree = "<group>"; };
 		F884CF2A0D95EC376015EE76 /* Pods-Cryptosignals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptosignals.release.xcconfig"; path = "Target Support Files/Pods-Cryptosignals/Pods-Cryptosignals.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -235,6 +239,7 @@
 				966E36472653A79400FB011D /* OSlideCurrenciesView.swift */,
 				966E36BA2653EFC000FB011D /* OSlideExchangesView.swift */,
 				966E36C72654023000FB011D /* OSlideRiskView.swift */,
+				96F44DA726551F0100B63D53 /* OSlideStrategiesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -246,6 +251,7 @@
 				966E36602653C5C200FB011D /* CurrenciesCollection */,
 				9628B6232652943700C93AA7 /* OLevelCell.swift */,
 				966E364426539B2500FB011D /* OInterestCell.swift */,
+				96F44DAA26551F2500B63D53 /* OStrategyCell.swift */,
 			);
 			path = Atoms;
 			sourceTree = "<group>";
@@ -790,6 +796,7 @@
 				96991D2D264A8AD7008FFC69 /* SplashViewModel.swift in Sources */,
 				96991D20264A8AD7008FFC69 /* SessionManagerCore.swift in Sources */,
 				966E364D2653AD3B00FB011D /* Currency.swift in Sources */,
+				96F44DA826551F0100B63D53 /* OSlideStrategiesView.swift in Sources */,
 				966E36B82653EF5700FB011D /* SaveSelectedExchangesRequest.swift in Sources */,
 				96991CE0264A8AD6008FFC69 /* NursingNavigationController.swift in Sources */,
 				966E36652653C5C200FB011D /* CurrenciesCollectionLayout.swift in Sources */,
@@ -818,6 +825,7 @@
 				966E36662653C5C200FB011D /* CurrenciesCollectionElement.swift in Sources */,
 				96991CD4264A8AD6008FFC69 /* UIDeviceExtension.swift in Sources */,
 				96991CDF264A8AD6008FFC69 /* Toast.swift in Sources */,
+				96F44DAB26551F2500B63D53 /* OStrategyCell.swift in Sources */,
 				966E36B22653ED8200FB011D /* GetExchangesRequest.swift in Sources */,
 				96991CD6264A8AD6008FFC69 /* StringExtension.swift in Sources */,
 				966E36BF2653F12E00FB011D /* ExchangesCollectionView.swift in Sources */,

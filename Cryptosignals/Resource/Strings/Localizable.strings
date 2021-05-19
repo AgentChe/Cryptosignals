@@ -45,3 +45,8 @@
 "Onboarding.Exchanges.ErrorToSave" = "Failed to save exchanges";
 "Onboarding.Risk.Title" = "Pick your risk-reward ratio";
 "Onboarding.Risk.SubTitle" = "It used to assess the profit potential of a trade relative to its potential loss";
+"Onboarding.Strategy.Title" = "Select your trading\nstrategies";
+"Onboarding.Strategy.Cell1" = "Day trading";
+"Onboarding.Strategy.Cell2" = "Swing trading";
+"Onboarding.Strategy.Cell3" = "Trend trading";
+"Onboarding.Strategy.Cell4" = "Scalping";
