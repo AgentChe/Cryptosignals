@@ -55,3 +55,7 @@
 "Onboarding.Question.Question2" = "Bitcoin is best suited for long-term trading";
 "Onboarding.Question.Question3" = "Most of the potential lies in new emerging cryptocurrencies, not the well-established ones";
 "Onboarding.Question.Question4" = "Cross-trading the same currency withing different exchanges is an overlooked opportunity";
+"Onboarding.Progress.Title" = "Calibrating our\nsources...";
+"Onboarding.Progress.Cell1" = "Analyzing your skill level";
+"Onboarding.Progress.Cell2" = "Analyzing your goals";
+"Onboarding.Progress.Cell3" = "Processing selected currencies";

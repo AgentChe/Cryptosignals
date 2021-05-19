@@ -9,7 +9,7 @@ import UIKit
 
 final class OnboardingView: UIView {
     enum Step: Int {
-        case started, level, interest, currencies, exchanges, risk, strategy, question1, question2, question3, question4
+        case started, level, interest, currencies, exchanges, risk, strategy, question1, question2, question3, question4, progress
     }
     
     var didFinish: (() -> Void)?
@@ -38,7 +38,8 @@ final class OnboardingView: UIView {
             OSlideQuestionView(step: .question1, questionKey: "Onboarding.Question.Question1".localized),
             OSlideQuestionView(step: .question2, questionKey: "Onboarding.Question.Question2".localized),
             OSlideQuestionView(step: .question3, questionKey: "Onboarding.Question.Question3".localized),
-            OSlideQuestionView(step: .question4, questionKey: "Onboarding.Question.Question4".localized)
+            OSlideQuestionView(step: .question4, questionKey: "Onboarding.Question.Question4".localized),
+            OSlideProgressView(step: .progress)
         ]
     }()
     

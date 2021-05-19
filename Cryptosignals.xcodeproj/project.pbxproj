@@ -104,6 +104,8 @@
 		96F44DAE2655257E00B63D53 /* OQuestionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F44DAD2655257E00B63D53 /* OQuestionButton.swift */; };
 		96F44DB1265525B300B63D53 /* OQuestionFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F44DB0265525B300B63D53 /* OQuestionFormView.swift */; };
 		96F44DB4265526F900B63D53 /* OSlideQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F44DB3265526F900B63D53 /* OSlideQuestionView.swift */; };
+		96F44DB82655431800B63D53 /* OProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F44DB72655431800B63D53 /* OProgressCell.swift */; };
+		96F44DBE2655446900B63D53 /* OSlideProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F44DBD2655446900B63D53 /* OSlideProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -208,6 +210,8 @@
 		96F44DAD2655257E00B63D53 /* OQuestionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OQuestionButton.swift; sourceTree = "<group>"; };
 		96F44DB0265525B300B63D53 /* OQuestionFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OQuestionFormView.swift; sourceTree = "<group>"; };
 		96F44DB3265526F900B63D53 /* OSlideQuestionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSlideQuestionView.swift; sourceTree = "<group>"; };
+		96F44DB72655431800B63D53 /* OProgressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OProgressCell.swift; sourceTree = "<group>"; };
+		96F44DBD2655446900B63D53 /* OSlideProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSlideProgressView.swift; sourceTree = "<group>"; };
 		F884CF2A0D95EC376015EE76 /* Pods-Cryptosignals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptosignals.release.xcconfig"; path = "Target Support Files/Pods-Cryptosignals/Pods-Cryptosignals.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -247,6 +251,7 @@
 				966E36C72654023000FB011D /* OSlideRiskView.swift */,
 				96F44DA726551F0100B63D53 /* OSlideStrategiesView.swift */,
 				96F44DB3265526F900B63D53 /* OSlideQuestionView.swift */,
+				96F44DBD2655446900B63D53 /* OSlideProgressView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -261,6 +266,7 @@
 				96F44DAA26551F2500B63D53 /* OStrategyCell.swift */,
 				96F44DAD2655257E00B63D53 /* OQuestionButton.swift */,
 				96F44DB0265525B300B63D53 /* OQuestionFormView.swift */,
+				96F44DB72655431800B63D53 /* OProgressCell.swift */,
 			);
 			path = Atoms;
 			sourceTree = "<group>";
@@ -809,6 +815,7 @@
 				966E36B82653EF5700FB011D /* SaveSelectedExchangesRequest.swift in Sources */,
 				96991CE0264A8AD6008FFC69 /* NursingNavigationController.swift in Sources */,
 				966E36652653C5C200FB011D /* CurrenciesCollectionLayout.swift in Sources */,
+				96F44DBE2655446900B63D53 /* OSlideProgressView.swift in Sources */,
 				966E36C22653F15D00FB011D /* ExchangesCollectionCell.swift in Sources */,
 				9628AF60264ED6D700C93AA7 /* OSlideView.swift in Sources */,
 				96991CD8264A8AD6008FFC69 /* Scalable.swift in Sources */,
@@ -835,6 +842,7 @@
 				966E36662653C5C200FB011D /* CurrenciesCollectionElement.swift in Sources */,
 				96991CD4264A8AD6008FFC69 /* UIDeviceExtension.swift in Sources */,
 				96991CDF264A8AD6008FFC69 /* Toast.swift in Sources */,
+				96F44DB82655431800B63D53 /* OProgressCell.swift in Sources */,
 				96F44DAB26551F2500B63D53 /* OStrategyCell.swift in Sources */,
 				966E36B22653ED8200FB011D /* GetExchangesRequest.swift in Sources */,
 				96991CD6264A8AD6008FFC69 /* StringExtension.swift in Sources */,
