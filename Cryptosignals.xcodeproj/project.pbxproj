@@ -101,6 +101,9 @@
 		96991DA9264A8B10008FFC69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96991DA8264A8B10008FFC69 /* LaunchScreen.storyboard */; };
 		96F44DA826551F0100B63D53 /* OSlideStrategiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F44DA726551F0100B63D53 /* OSlideStrategiesView.swift */; };
 		96F44DAB26551F2500B63D53 /* OStrategyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F44DAA26551F2500B63D53 /* OStrategyCell.swift */; };
+		96F44DAE2655257E00B63D53 /* OQuestionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F44DAD2655257E00B63D53 /* OQuestionButton.swift */; };
+		96F44DB1265525B300B63D53 /* OQuestionFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F44DB0265525B300B63D53 /* OQuestionFormView.swift */; };
+		96F44DB4265526F900B63D53 /* OSlideQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F44DB3265526F900B63D53 /* OSlideQuestionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -202,6 +205,9 @@
 		96991DB1264A8C46008FFC69 /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
 		96F44DA726551F0100B63D53 /* OSlideStrategiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSlideStrategiesView.swift; sourceTree = "<group>"; };
 		96F44DAA26551F2500B63D53 /* OStrategyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OStrategyCell.swift; sourceTree = "<group>"; };
+		96F44DAD2655257E00B63D53 /* OQuestionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OQuestionButton.swift; sourceTree = "<group>"; };
+		96F44DB0265525B300B63D53 /* OQuestionFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OQuestionFormView.swift; sourceTree = "<group>"; };
+		96F44DB3265526F900B63D53 /* OSlideQuestionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSlideQuestionView.swift; sourceTree = "<group>"; };
 		F884CF2A0D95EC376015EE76 /* Pods-Cryptosignals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptosignals.release.xcconfig"; path = "Target Support Files/Pods-Cryptosignals/Pods-Cryptosignals.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -240,6 +246,7 @@
 				966E36BA2653EFC000FB011D /* OSlideExchangesView.swift */,
 				966E36C72654023000FB011D /* OSlideRiskView.swift */,
 				96F44DA726551F0100B63D53 /* OSlideStrategiesView.swift */,
+				96F44DB3265526F900B63D53 /* OSlideQuestionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -252,6 +259,8 @@
 				9628B6232652943700C93AA7 /* OLevelCell.swift */,
 				966E364426539B2500FB011D /* OInterestCell.swift */,
 				96F44DAA26551F2500B63D53 /* OStrategyCell.swift */,
+				96F44DAD2655257E00B63D53 /* OQuestionButton.swift */,
+				96F44DB0265525B300B63D53 /* OQuestionFormView.swift */,
 			);
 			path = Atoms;
 			sourceTree = "<group>";
@@ -807,6 +816,7 @@
 				96991CF5264A8AD6008FFC69 /* Paygate.swift in Sources */,
 				96991CDE264A8AD6008FFC69 /* ImagePicker.swift in Sources */,
 				966E36AE2653ED4700FB011D /* Exchange.swift in Sources */,
+				96F44DB1265525B300B63D53 /* OQuestionFormView.swift in Sources */,
 				96991CE6264A8AD6008FFC69 /* CircleView.swift in Sources */,
 				96991D56264A8AD7008FFC69 /* PaygateViewControllerDelegate.swift in Sources */,
 				96991CDD264A8AD6008FFC69 /* Weak.swift in Sources */,
@@ -842,6 +852,7 @@
 				966E365E2653B16300FB011D /* ContentManagerCore.swift in Sources */,
 				9628B6272652981700C93AA7 /* OSlideLevelView.swift in Sources */,
 				96991CEE264A8AD6008FFC69 /* PaygateManagerCore.swift in Sources */,
+				96F44DAE2655257E00B63D53 /* OQuestionButton.swift in Sources */,
 				966E364526539B2500FB011D /* OInterestCell.swift in Sources */,
 				96991D5C264A8AD7008FFC69 /* PaygateSpecialOfferView.swift in Sources */,
 				966E36C52653F1BC00FB011D /* ExchangesCollectionElement.swift in Sources */,
@@ -855,6 +866,7 @@
 				96991CE4264A8AD6008FFC69 /* PaddingPickerView.swift in Sources */,
 				96991CF6264A8AD6008FFC69 /* PaygateMainOffer.swift in Sources */,
 				966E369F2653E18B00FB011D /* ContentMediator.swift in Sources */,
+				96F44DB4265526F900B63D53 /* OSlideQuestionView.swift in Sources */,
 				966E36B52653EDBE00FB011D /* GetExchangesResponseMapper.swift in Sources */,
 				966E36762653D01000FB011D /* Content.swift in Sources */,
 				96991CF0264A8AD6008FFC69 /* PaygateMapper.swift in Sources */,
