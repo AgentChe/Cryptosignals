@@ -12,7 +12,7 @@ final class TabCoordinator {
     
     lazy var closedSignalsVC = NursingNavigationController(rootViewController: UIViewController())
     lazy var openedSignalsVC = NursingNavigationController(rootViewController: UIViewController())
-    lazy var newsVC = NursingNavigationController(rootViewController: UIViewController())
+    lazy var newsVC = NursingNavigationController(rootViewController: NewsViewController.make())
     
     private var previousVC: UIViewController?
     

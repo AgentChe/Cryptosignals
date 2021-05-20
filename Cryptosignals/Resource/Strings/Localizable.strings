@@ -64,3 +64,7 @@
 "TabBar.ClosedSignals" = "Closed signals";
 "TabBar.OpenSignals" = "Open signals";
 "TabBar.News" = "News";
+
+// MARK: News
+"News.Title" = "News";
+"News.MoreForYou" = "More for you";
