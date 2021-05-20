@@ -68,3 +68,6 @@
 // MARK: News
 "News.Title" = "News";
 "News.MoreForYou" = "More for you";
+
+// MARK: Post
+"Post.Title" = "News";

@@ -44,6 +44,7 @@ extension NewsViewController {
 // MARK: NewsTableViewDelegate
 extension NewsViewController: NewsTableViewDelegate {
     func newsTableDidTapped(id: Int) {
-        print("id: \(id)")
+        let vc = PostViewController.make(postId: id)
+        present(vc, animated: true)
     }
 }

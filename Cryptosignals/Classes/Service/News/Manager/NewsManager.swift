@@ -9,4 +9,5 @@ import RxSwift
 
 protocol NewsManager {
     func obtainNews() -> Single<News?>
+    func obtaintDetails(with id: Int) -> Single<PostDetails?>
 }

@@ -17,4 +17,13 @@ extension NewsManagerCore {
             .callServerApi(requestBody: GetNewsRequest())
             .map(GetNewsResponseMapper.map(from:))
     }
+    
+    func obtaintDetails(with id: Int) -> Single<PostDetails?> {
+        let request = GetPostDetailsRequest(id: id)
+        
+        return SDKStorage.shared
+            .restApiTransport
+            .callServerApi(requestBody: request)
+            .map(GetPostDetailsResponseMapper.map(from:))
+    }
 }

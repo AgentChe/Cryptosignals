@@ -7,7 +7,8 @@
 
 import UIKit
 
-final class NewsTablePostCell: UITableViewCell {lazy var pictureView = makeImageView()
+final class NewsTablePostCell: UITableViewCell {
+    lazy var pictureView = makeImageView()
     lazy var titleLabel = maketLabel()
     lazy var timeLabel = maketLabel()
     
