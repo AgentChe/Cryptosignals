@@ -106,6 +106,11 @@
 		96F44DB4265526F900B63D53 /* OSlideQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F44DB3265526F900B63D53 /* OSlideQuestionView.swift */; };
 		96F44DB82655431800B63D53 /* OProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F44DB72655431800B63D53 /* OProgressCell.swift */; };
 		96F44DBE2655446900B63D53 /* OSlideProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F44DBD2655446900B63D53 /* OSlideProgressView.swift */; };
+		96F4527F26564F9200B63D53 /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F4527E26564F9200B63D53 /* TabController.swift */; };
+		96F4528626564FAB00B63D53 /* TabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F4528526564FAB00B63D53 /* TabCoordinator.swift */; };
+		96F4528B26564FC200B63D53 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F4528A26564FC200B63D53 /* TabView.swift */; };
+		96F4529026564FDD00B63D53 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F4528F26564FDD00B63D53 /* TabBar.swift */; };
+		96F4529326564FFE00B63D53 /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F4529226564FFE00B63D53 /* TabItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -212,6 +217,11 @@
 		96F44DB3265526F900B63D53 /* OSlideQuestionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSlideQuestionView.swift; sourceTree = "<group>"; };
 		96F44DB72655431800B63D53 /* OProgressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OProgressCell.swift; sourceTree = "<group>"; };
 		96F44DBD2655446900B63D53 /* OSlideProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSlideProgressView.swift; sourceTree = "<group>"; };
+		96F4527E26564F9200B63D53 /* TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
+		96F4528526564FAB00B63D53 /* TabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCoordinator.swift; sourceTree = "<group>"; };
+		96F4528A26564FC200B63D53 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		96F4528F26564FDD00B63D53 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		96F4529226564FFE00B63D53 /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
 		F884CF2A0D95EC376015EE76 /* Pods-Cryptosignals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cryptosignals.release.xcconfig"; path = "Target Support Files/Pods-Cryptosignals/Pods-Cryptosignals.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -590,6 +600,7 @@
 		96991C33264A8AD5008FFC69 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				96F4527D26564F6100B63D53 /* TabController */,
 				9628AF17264ECF0B00C93AA7 /* Onboarding */,
 				96991C42264A8AD5008FFC69 /* Splash */,
 				96991C79264A8AD5008FFC69 /* Paygate */,
@@ -654,6 +665,26 @@
 				96991DAF264A8C36008FFC69 /* SF-Pro-Display-Bold.otf */,
 			);
 			path = SFProDisplay;
+			sourceTree = "<group>";
+		};
+		96F4527D26564F6100B63D53 /* TabController */ = {
+			isa = PBXGroup;
+			children = (
+				96F4528926564FB400B63D53 /* Views */,
+				96F4527E26564F9200B63D53 /* TabController.swift */,
+				96F4528A26564FC200B63D53 /* TabView.swift */,
+				96F4528526564FAB00B63D53 /* TabCoordinator.swift */,
+			);
+			path = TabController;
+			sourceTree = "<group>";
+		};
+		96F4528926564FB400B63D53 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				96F4528F26564FDD00B63D53 /* TabBar.swift */,
+				96F4529226564FFE00B63D53 /* TabItemView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		A211307F52A146729465373C /* Frameworks */ = {
@@ -841,14 +872,17 @@
 				96991CEA264A8AD6008FFC69 /* UIViewRxExtension.swift in Sources */,
 				966E36662653C5C200FB011D /* CurrenciesCollectionElement.swift in Sources */,
 				96991CD4264A8AD6008FFC69 /* UIDeviceExtension.swift in Sources */,
+				96F4529026564FDD00B63D53 /* TabBar.swift in Sources */,
 				96991CDF264A8AD6008FFC69 /* Toast.swift in Sources */,
 				96F44DB82655431800B63D53 /* OProgressCell.swift in Sources */,
 				96F44DAB26551F2500B63D53 /* OStrategyCell.swift in Sources */,
 				966E36B22653ED8200FB011D /* GetExchangesRequest.swift in Sources */,
 				96991CD6264A8AD6008FFC69 /* StringExtension.swift in Sources */,
 				966E36BF2653F12E00FB011D /* ExchangesCollectionView.swift in Sources */,
+				96F4528B26564FC200B63D53 /* TabView.swift in Sources */,
 				96991CD1264A8AD6008FFC69 /* UIColorExtension.swift in Sources */,
 				96991D59264A8AD7008FFC69 /* PaygateMainView.swift in Sources */,
+				96F4528626564FAB00B63D53 /* TabCoordinator.swift in Sources */,
 				96991D1F264A8AD7008FFC69 /* Session.swift in Sources */,
 				96991D55264A8AD7008FFC69 /* PaygateViewModel.swift in Sources */,
 				96991CD9264A8AD6008FFC69 /* TextAttributes.swift in Sources */,
@@ -860,6 +894,7 @@
 				966E365E2653B16300FB011D /* ContentManagerCore.swift in Sources */,
 				9628B6272652981700C93AA7 /* OSlideLevelView.swift in Sources */,
 				96991CEE264A8AD6008FFC69 /* PaygateManagerCore.swift in Sources */,
+				96F4527F26564F9200B63D53 /* TabController.swift in Sources */,
 				96F44DAE2655257E00B63D53 /* OQuestionButton.swift in Sources */,
 				966E364526539B2500FB011D /* OInterestCell.swift in Sources */,
 				96991D5C264A8AD7008FFC69 /* PaygateSpecialOfferView.swift in Sources */,
@@ -876,6 +911,7 @@
 				966E369F2653E18B00FB011D /* ContentMediator.swift in Sources */,
 				96F44DB4265526F900B63D53 /* OSlideQuestionView.swift in Sources */,
 				966E36B52653EDBE00FB011D /* GetExchangesResponseMapper.swift in Sources */,
+				96F4529326564FFE00B63D53 /* TabItemView.swift in Sources */,
 				966E36762653D01000FB011D /* Content.swift in Sources */,
 				96991CF0264A8AD6008FFC69 /* PaygateMapper.swift in Sources */,
 				96991CFB264A8AD6008FFC69 /* PaygateManager.swift in Sources */,

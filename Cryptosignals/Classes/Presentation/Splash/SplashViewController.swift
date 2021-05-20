@@ -59,7 +59,7 @@ private extension SplashViewController {
         case .onboarding:
             UIApplication.shared.keyWindow?.rootViewController = OnboardingViewController.make()
         case .main:
-            break
+            UIApplication.shared.keyWindow?.rootViewController = TabController.make()
         }
     }
 }

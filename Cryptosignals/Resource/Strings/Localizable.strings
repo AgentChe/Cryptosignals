@@ -59,3 +59,8 @@
 "Onboarding.Progress.Cell1" = "Analyzing your skill level";
 "Onboarding.Progress.Cell2" = "Analyzing your goals";
 "Onboarding.Progress.Cell3" = "Processing selected currencies";
+
+// MARK: TabBar
+"TabBar.ClosedSignals" = "Closed signals";
+"TabBar.OpenSignals" = "Open signals";
+"TabBar.News" = "News";

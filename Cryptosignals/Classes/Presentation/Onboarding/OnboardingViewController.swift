@@ -32,7 +32,6 @@ final class OnboardingViewController: UIViewController {
             }
             
             this.markAsViewed()
-            
             this.goToNext()
         }
         
@@ -50,9 +49,7 @@ extension OnboardingViewController {
 // MARK: API
 extension OnboardingViewController {
     static func wasViewed() -> Bool {
-        // TODO
-        false
-//        UserDefaults.standard.bool(forKey: OnboardingViewController.Constants.wasViewedKey)
+        UserDefaults.standard.bool(forKey: OnboardingViewController.Constants.wasViewedKey)
     }
 }
 
@@ -63,7 +60,7 @@ private extension OnboardingViewController {
     }
     
     func goToNext() {
-        
+        UIApplication.shared.keyWindow?.rootViewController = TabController.make()
     }
     
     func addSkipAction() {
