@@ -57,20 +57,20 @@ private extension PaygateOptionView {
     }
     
     func updateColors() {
-        backgroundColor = isSelected ? .white : .clear
+        backgroundColor = isSelected ? UIColor(integralRed: 63, green: 166, blue: 255) : UIColor(integralRed: 33, green: 34, blue: 65)
         
         checkedImageView.isHidden = !isSelected
     
-        layer.borderWidth = 2.scale
-        layer.borderColor = isSelected ? UIColor.green.cgColor : UIColor.black.cgColor
+        layer.borderWidth = 0.scale
+        layer.borderColor = UIColor.clear.cgColor
         
-        titleLabel.textColor = UIColor(integralRed: 17, green: 17, blue: 17)
-        captionLabel.textColor = UIColor(integralRed: 17, green: 17, blue: 17)
-        subCaptionLabel.textColor = UIColor(integralRed: 17, green: 17, blue: 17)
-        bottomLabel.textColor = UIColor(integralRed: 17, green: 17, blue: 17)
+        titleLabel.textColor = UIColor.white
+        captionLabel.textColor = UIColor.white
+        subCaptionLabel.textColor = UIColor.white
+        bottomLabel.textColor = UIColor.white
         
-        saveLabel.textColor = UIColor.white
-        saveLabel.backgroundColor = UIColor.green
+        saveLabel.textColor = isSelected ? UIColor.white : UIColor(integralRed: 33, green: 34, blue: 65)
+        saveLabel.backgroundColor = isSelected ? UIColor(integralRed: 33, green: 34, blue: 65) : UIColor.white
     }
 }
 

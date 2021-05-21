@@ -59,7 +59,7 @@ final class PaygateMainView: UIView {
 // MARK: Private
 private extension PaygateMainView {
     func initialize() {
-        backgroundColor = UIColor.green
+        backgroundColor = UIColor(integralRed: 24, green: 25, blue: 47)
     }
     
     @objc
@@ -91,35 +91,35 @@ private extension PaygateMainView {
 private extension PaygateMainView {
     func makeConstraints() {
         NSLayoutConstraint.activate([
+            imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            imageView.heightAnchor.constraint(equalToConstant: 427.scale),
+            imageView.topAnchor.constraint(equalTo: topAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
             closeButton.widthAnchor.constraint(equalToConstant: 37.scale),
             closeButton.heightAnchor.constraint(equalToConstant: 37.scale),
             closeButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20.scale),
-            closeButton.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 44.scale : 30.scale)
+            closeButton.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 54.scale : 20.scale)
         ])
         
         NSLayoutConstraint.activate([
             restoreButton.centerYAnchor.constraint(equalTo: closeButton.centerYAnchor),
             restoreButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16.scale),
-            restoreButton.heightAnchor.constraint(equalToConstant: 20.scale)
-        ])
-        
-        NSLayoutConstraint.activate([
-            imageView.widthAnchor.constraint(equalToConstant: 257.scale),
-            imageView.heightAnchor.constraint(equalToConstant: 106.scale),
-            imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            imageView.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 108.scale : 55.scale)
+            restoreButton.heightAnchor.constraint(equalToConstant: 25.scale)
         ])
         
         NSLayoutConstraint.activate([
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 11.scale),
             titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -11.scale),
-            titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: ScreenSize.isIphoneXFamily ? 32.scale : 16.scale)
+            titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 222.scale : 90.scale)
         ])
         
         NSLayoutConstraint.activate([
             infoCell1.leadingAnchor.constraint(equalTo: leadingAnchor),
             infoCell1.trailingAnchor.constraint(equalTo: trailingAnchor),
-            infoCell1.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 12.scale)
+            infoCell1.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 24.scale)
         ])
         
         NSLayoutConstraint.activate([
@@ -139,20 +139,20 @@ private extension PaygateMainView {
             leftOptionView.heightAnchor.constraint(equalToConstant: 185.scale),
             leftOptionView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20.scale),
             leftOptionView.trailingAnchor.constraint(equalTo: rightOptionView.leadingAnchor, constant: -13.scale),
-            leftOptionView.topAnchor.constraint(equalTo: infoCell3.bottomAnchor, constant: 20.scale)
+            leftOptionView.topAnchor.constraint(equalTo: infoCell3.bottomAnchor, constant: 40.scale)
         ])
         
         NSLayoutConstraint.activate([
             rightOptionView.heightAnchor.constraint(equalToConstant: 185.scale),
             rightOptionView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20.scale),
-            rightOptionView.topAnchor.constraint(equalTo: infoCell3.bottomAnchor, constant: 20.scale)
+            rightOptionView.topAnchor.constraint(equalTo: infoCell3.bottomAnchor, constant: 40.scale)
         ])
         
         NSLayoutConstraint.activate([
             lockImageView.widthAnchor.constraint(equalToConstant: 12.scale),
             lockImageView.heightAnchor.constraint(equalToConstant: 16.scale),
             lockImageView.trailingAnchor.constraint(equalTo: securedLabel.leadingAnchor, constant: -10.scale),
-            lockImageView.bottomAnchor.constraint(equalTo: continueButton.topAnchor, constant: -15.scale)
+            lockImageView.bottomAnchor.constraint(equalTo: continueButton.topAnchor, constant: -9.scale)
         ])
         
         NSLayoutConstraint.activate([
@@ -164,13 +164,13 @@ private extension PaygateMainView {
             continueButton.heightAnchor.constraint(equalToConstant: 60.scale),
             continueButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 26.scale),
             continueButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -26.scale),
-            continueButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: ScreenSize.isIphoneXFamily ? -70.scale : -40.scale)
+            continueButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: ScreenSize.isIphoneXFamily ? -77.scale : -47.scale)
         ])
         
         NSLayoutConstraint.activate([
             termsAndPolicyLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8.scale),
             termsAndPolicyLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8.scale),
-            termsAndPolicyLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: ScreenSize.isIphoneXFamily ? -25.scale : -15.scale)
+            termsAndPolicyLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: ScreenSize.isIphoneXFamily ? -32.scale : -21.scale)
         ])
         
         NSLayoutConstraint.activate([
@@ -192,9 +192,8 @@ private extension PaygateMainView {
     
     func makeRestoreButton() -> UIButton {
         let attrs = TextAttributes()
-            .textColor(UIColor.black)
-            .font(Fonts.SFProDisplay.regular(size: 13.scale))
-            .letterSpacing(-0.6.scale)
+            .textColor(UIColor.white)
+            .font(Fonts.SFProDisplay.regular(size: 16.scale))
         
         let view = UIButton()
         view.setAttributedTitle("Paygate.Main.RestorePurchases".localized.attributed(with: attrs), for: .normal)
@@ -215,9 +214,9 @@ private extension PaygateMainView {
     
     func makeTitleLabel() -> UILabel {
         let attrs = TextAttributes()
-            .textColor(UIColor.black)
+            .textColor(UIColor.white)
             .font(Fonts.SFProDisplay.bold(size: 28.scale))
-            .lineHeight(ScreenSize.isIphoneXFamily ? 41.scale : 30.scale)
+            .lineHeight(33.scale)
             .textAlignment(.center)
         
         let view = UILabel()
@@ -241,7 +240,7 @@ private extension PaygateMainView {
         let view = PaygateOptionView()
         view.alpha = 0
         view.isHidden = true
-        view.layer.cornerRadius = 8.scale
+        view.layer.cornerRadius = 20.scale
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view
@@ -259,13 +258,11 @@ private extension PaygateMainView {
     
     func makeSecuredLabel() -> UILabel {
         let attrs = TextAttributes()
-            .textColor(UIColor.black)
-            .font(Fonts.SFProDisplay.semiBold(size: 13.scale))
-            .lineHeight(19.5.scale)
-            .letterSpacing(-0.6.scale)
+            .textColor(UIColor.white)
+            .font(Fonts.SFProDisplay.regular(size: 14.scale))
+            .lineHeight(16.scale)
         
         let view = UILabel()
-        view.isHidden = !ScreenSize.isIphoneXFamily
         view.attributedText = "Paygate.Main.Info".localized.attributed(with: attrs)
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
@@ -276,13 +273,12 @@ private extension PaygateMainView {
         let attrs = TextAttributes()
             .textColor(UIColor.white)
             .font(Fonts.SFProDisplay.semiBold(size: 20.scale))
-            .lineHeight(24.scale)
         
         let view = UIButton()
         view.setAttributedTitle("Paygate.Continue".localized.attributed(with: attrs), for: .normal)
         view.isHidden = true
-        view.backgroundColor = UIColor.green
-        view.layer.cornerRadius = 30.scale
+        view.backgroundColor = UIColor(integralRed: 63, green: 166, blue: 255)
+        view.layer.cornerRadius = 15.scale
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view
@@ -290,19 +286,20 @@ private extension PaygateMainView {
     
     func makeTermsAndPolicyLabel() -> UILabel {
         let attrs = TextAttributes()
-            .font(Fonts.SFProDisplay.regular(size: 13.scale))
-            .lineHeight(19.5.scale)
-            .letterSpacing(-0.6.scale)
-            .textColor(UIColor.black)
+            .font(Fonts.SFProDisplay.regular(size: 14.scale))
+            .lineHeight(16.scale)
+            .textColor(UIColor.white)
             .textAlignment(.center)
-            .dictionary
         
-        var underlineAtts = attrs
-        underlineAtts[.underlineStyle] = NSUnderlineStyle.single.rawValue
+        let attrs2 = TextAttributes()
+            .font(Fonts.SFProDisplay.regular(size: 12.scale))
+            .lineHeight(14.scale)
+            .textColor(UIColor.white.withAlphaComponent(0.5))
+            .textAlignment(.center)
         
-        let terms = NSAttributedString(string: "Paygate.Main.TermsOfUse".localized, attributes: underlineAtts)
-        let and = NSAttributedString(string: "Paygate.Main.And".localized, attributes: attrs)
-        let policy = NSAttributedString(string: "Paygate.Main.PrivacyPolicy".localized, attributes: underlineAtts)
+        let terms = "Paygate.Main.TermsOfUse".localized.attributed(with: attrs)
+        let and = "Paygate.Main.And".localized.attributed(with: attrs2)
+        let policy = "Paygate.Main.PrivacyPolicy".localized.attributed(with: attrs)
         
         let attributedText = NSMutableAttributedString()
         attributedText.append(terms)

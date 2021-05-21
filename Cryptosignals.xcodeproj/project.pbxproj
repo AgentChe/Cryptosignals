@@ -677,11 +677,11 @@
 		96991C79264A8AD5008FFC69 /* Paygate */ = {
 			isa = PBXGroup;
 			children = (
+				96991C7E264A8AD5008FFC69 /* Views */,
 				96991C7A264A8AD5008FFC69 /* PaygateViewModel.swift */,
 				96991C7B264A8AD5008FFC69 /* PaygateViewControllerDelegate.swift */,
 				96991C7C264A8AD5008FFC69 /* PaygateView.swift */,
 				96991C7D264A8AD5008FFC69 /* PaygateViewController.swift */,
-				96991C7E264A8AD5008FFC69 /* Views */,
 			);
 			path = Paygate;
 			sourceTree = "<group>";

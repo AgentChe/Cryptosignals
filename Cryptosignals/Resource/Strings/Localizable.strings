@@ -71,3 +71,16 @@
 
 // MARK: Post
 "Post.Title" = "News";
+
+// MARK: Paygate
+"Paygate.Main.Title" = "RECEIVE PERSONALLY\nTAILORED SIGNALS";
+"Paygate.Main.Cell1" = "Track only relevant signals";
+"Paygate.Main.Cell2" = "Long and short trades";
+"Paygate.Main.Cell3" = "Quick real-time updates";
+"Paygate.Main.Info" = "Secured with iTunes. Cancel anytime.";
+"Paygate.Main.TermsOfUse" = "Terms of use";
+"Paygate.Main.And" = " and ";
+"Paygate.Main.PrivacyPolicy" = "Privacy Policy";
+"Paygate.Main.RestorePurchases" = "Restore purchases";
+"Paygate.Purchase.Failed" = "Failed to make purchase";
+"Paygate.Continue" = "Continue";

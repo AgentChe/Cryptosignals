@@ -15,7 +15,7 @@ final class PaygateMainInfoCell: UIView {
         didSet {
             label.attributedText = title
                 .attributed(with: TextAttributes()
-                                .textColor(UIColor.black)
+                                .textColor(UIColor.white)
                                 .font(Fonts.SFProDisplay.semiBold(size: 17.scale))
                                 .lineHeight(20.scale))
         }
@@ -36,7 +36,7 @@ final class PaygateMainInfoCell: UIView {
 private extension PaygateMainInfoCell {
     func makeConstraints() {
         NSLayoutConstraint.activate([
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 41.scale),
+            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40.scale),
             imageView.centerYAnchor.constraint(equalTo: centerYAnchor),
             imageView.widthAnchor.constraint(equalToConstant: 13.scale),
             imageView.heightAnchor.constraint(equalToConstant: 10.scale)
