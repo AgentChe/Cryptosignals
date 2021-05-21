@@ -55,13 +55,11 @@ extension SplashViewController {
 // MARK: Private
 private extension SplashViewController {
     func step(_ step: SplashViewModel.Step) {
-        // TODO
-        present(PaygateViewController.make(), animated: true)
-//        switch step {
-//        case .onboarding:
-//            UIApplication.shared.keyWindow?.rootViewController = OnboardingViewController.make()
-//        case .main:
-//            UIApplication.shared.keyWindow?.rootViewController = TabController.make()
-//        }
+        switch step {
+        case .onboarding:
+            UIApplication.shared.keyWindow?.rootViewController = OnboardingViewController.make()
+        case .main:
+            UIApplication.shared.keyWindow?.rootViewController = TabController.make()
+        }
     }
 }
