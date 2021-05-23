@@ -20,6 +20,7 @@ final class SignalsViewModel {
     
     private lazy var signalsManager = SignalsManagerCore()
     private lazy var sessionManager = SessionManagerCore()
+    private lazy var contentManager = ContentManagerCore()
     
     init(kind: SignalsViewController.Kind) {
         self.kind = kind
@@ -38,11 +39,7 @@ private extension SignalsViewModel {
     }
     
     func closedSignals() -> Driver<Step> {
-        return self.signalsManager.obtainClosedSignals()
-            .map { signals -> [CryptoSignalsTableElement] in
-                signals.map { _ in CryptoSignalsTableElement() }
-            }
-            .asDriver(onErrorJustReturn: [])
+        return getElemenets()
             .map { Step.elements($0) }
     }
     
@@ -57,12 +54,45 @@ private extension SignalsViewModel {
                     return .deferred { .just(.needPayment) }
                 }
                 
-                return self.signalsManager.obtainOpenedSignals()
-                    .map { signals -> [CryptoSignalsTableElement] in
-                        signals.map { _ in CryptoSignalsTableElement() }
-                    }
-                    .asDriver(onErrorJustReturn: [])
+                return self.getElemenets()
                     .map { Step.elements($0) }
+            }
+    }
+    
+    func getElemenets() -> Driver<[CryptoSignalsTableElement]> {
+        getSignals()
+            .flatMapLatest(mapToElements)
+    }
+    
+    func getSignals() -> Driver<[CryptoSignal]> {
+        let trigger = Signal
+            .merge(
+                ContentMediator.shared
+                    .rxDidUpdateSelectedExchangesIds
+                    .map { _ in Void() },
+                
+                ContentMediator.shared
+                    .rxDidUpdateSelectedCurrenciesIds
+                    .map { _ in Void() }
+            )
+            .startWith(Void())
+        
+        return trigger
+            .flatMapLatest { [weak self] _ -> Driver<[CryptoSignal]> in
+                guard let self = self else {
+                    return .never()
+                }
+                
+                switch self.kind {
+                case .closed:
+                    return self.signalsManager
+                        .obtainClosedSignals()
+                        .asDriver(onErrorJustReturn: [])
+                case .opened:
+                    return self.signalsManager
+                        .obtainOpenedSignals()
+                        .asDriver(onErrorJustReturn: [])
+                }
             }
     }
     
@@ -86,5 +116,28 @@ private extension SignalsViewModel {
         
         return Driver
             .merge(initial, updated)
+    }
+    
+    var mapToElements: ([CryptoSignal]) -> Driver<[CryptoSignalsTableElement]> {
+        { [weak self] signals -> Driver<[CryptoSignalsTableElement]> in
+            guard let self = self else {
+                return .never()
+            }
+            
+            return Driver
+                .zip(
+                    self.contentManager
+                        .retrieveExchanges(forceUpdate: false)
+                        .asDriver(onErrorJustReturn: []),
+                    
+                    self.contentManager
+                        .retrieveCurrencies(forceUpdate: false)
+                        .asDriver(onErrorJustReturn: [])
+                ) { exchanges, currencies -> [CryptoSignalsTableElement] in
+                    CryptoSignalsTableElementMapper.map(signals: signals,
+                                                        exchanges: exchanges,
+                                                        currencies: currencies)
+                }
+        }
     }
 }

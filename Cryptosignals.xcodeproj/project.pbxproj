@@ -59,6 +59,7 @@
 		969679212658E38C0070E7F7 /* CryptoSignalsTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969679202658E38C0070E7F7 /* CryptoSignalsTableElement.swift */; };
 		969679242658E3D30070E7F7 /* CryptoSignalsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969679232658E3D30070E7F7 /* CryptoSignalsTableCell.swift */; };
 		96967928265A27B60070E7F7 /* UnlockPremiumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96967927265A27B60070E7F7 /* UnlockPremiumView.swift */; };
+		9696794B265A43310070E7F7 /* CryptoSignalsTableElementMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9696794A265A43310070E7F7 /* CryptoSignalsTableElementMapper.swift */; };
 		96991B93264A89DB008FFC69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96991B92264A89DB008FFC69 /* Assets.xcassets */; };
 		96991CD1264A8AD6008FFC69 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991BC2264A8AD5008FFC69 /* UIColorExtension.swift */; };
 		96991CD2264A8AD6008FFC69 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991BC3264A8AD5008FFC69 /* Collection+Extension.swift */; };
@@ -204,6 +205,7 @@
 		969679202658E38C0070E7F7 /* CryptoSignalsTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoSignalsTableElement.swift; sourceTree = "<group>"; };
 		969679232658E3D30070E7F7 /* CryptoSignalsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoSignalsTableCell.swift; sourceTree = "<group>"; };
 		96967927265A27B60070E7F7 /* UnlockPremiumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockPremiumView.swift; sourceTree = "<group>"; };
+		9696794A265A43310070E7F7 /* CryptoSignalsTableElementMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoSignalsTableElementMapper.swift; sourceTree = "<group>"; };
 		96991B86264A89D8008FFC69 /* Cryptosignals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cryptosignals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96991B92264A89DB008FFC69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96991B97264A89DB008FFC69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -516,6 +518,7 @@
 		969679112658587B0070E7F7 /* Signals */ = {
 			isa = PBXGroup;
 			children = (
+				96967949265A43220070E7F7 /* Utils */,
 				9696791B2658E29E0070E7F7 /* Views */,
 				969679122658588D0070E7F7 /* SignalsViewController.swift */,
 				96967915265859770070E7F7 /* SignalsViewModel.swift */,
@@ -549,6 +552,14 @@
 				96967927265A27B60070E7F7 /* UnlockPremiumView.swift */,
 			);
 			path = UnlockPremium;
+			sourceTree = "<group>";
+		};
+		96967949265A43220070E7F7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9696794A265A43310070E7F7 /* CryptoSignalsTableElementMapper.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		96991B7D264A89D8008FFC69 = {
@@ -1130,6 +1141,7 @@
 				96991D58264A8AD7008FFC69 /* PaygateViewController.swift in Sources */,
 				96991CE8264A8AD6008FFC69 /* AppDelegate.swift in Sources */,
 				969679132658588D0070E7F7 /* SignalsViewController.swift in Sources */,
+				9696794B265A43310070E7F7 /* CryptoSignalsTableElementMapper.swift in Sources */,
 				96991CF4264A8AD6008FFC69 /* ProductPrice.swift in Sources */,
 				9628B6242652943700C93AA7 /* OLevelCell.swift in Sources */,
 				96991CF8264A8AD6008FFC69 /* GetPaygateRequest.swift in Sources */,
