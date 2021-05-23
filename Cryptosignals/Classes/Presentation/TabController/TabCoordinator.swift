@@ -10,8 +10,8 @@ import UIKit
 final class TabCoordinator {
     weak var parentVC: TabController?
     
-    lazy var closedSignalsVC = NursingNavigationController(rootViewController: UIViewController())
-    lazy var openedSignalsVC = NursingNavigationController(rootViewController: UIViewController())
+    lazy var closedSignalsVC = NursingNavigationController(rootViewController: SignalsViewController.make(kind: .closed))
+    lazy var openedSignalsVC = NursingNavigationController(rootViewController: SignalsViewController.make(kind: .opened))
     lazy var newsVC = NursingNavigationController(rootViewController: NewsViewController.make())
     
     private var previousVC: UIViewController?

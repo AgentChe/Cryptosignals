@@ -84,3 +84,19 @@
 "Paygate.Main.RestorePurchases" = "Restore purchases";
 "Paygate.Purchase.Failed" = "Failed to make purchase";
 "Paygate.Continue" = "Continue";
+
+// MARK: Signals
+"Signals.ClosedTitle" = "Closed signals";
+"Signals.OpenedTitle" = "Open signals";
+"Signals.Today" = "Today";
+"Signals.Yesterday" = "Yesterday";
+"Signals.LastWeek" = "Last week";
+"Signals.Older" = "Older";
+"Signals.Settings" = "Settings";
+"Signals.Long" = "LONG";
+"Signals.Short" = "SHORT";
+"Signals.Gain" = "Gain";
+"Signals.Percent" = "%.f2%%";
+"Signals.EntryPoint" = "Entry point";
+"Signals.TargetPrice" = "Target price";
+"Signals.UnlockPremium" = "Unlock Premium\nto access open signals";

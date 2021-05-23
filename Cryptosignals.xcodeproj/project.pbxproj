@@ -46,6 +46,19 @@
 		966E36C22653F15D00FB011D /* ExchangesCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966E36C12653F15D00FB011D /* ExchangesCollectionCell.swift */; };
 		966E36C52653F1BC00FB011D /* ExchangesCollectionElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966E36C42653F1BC00FB011D /* ExchangesCollectionElement.swift */; };
 		966E36C82654023000FB011D /* OSlideRiskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966E36C72654023000FB011D /* OSlideRiskView.swift */; };
+		969678F9265853570070E7F7 /* CryptoSignal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969678F8265853570070E7F7 /* CryptoSignal.swift */; };
+		969678FF265855460070E7F7 /* GetClosedSignalsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969678FE265855460070E7F7 /* GetClosedSignalsRequest.swift */; };
+		96967902265855BC0070E7F7 /* GetClosedSignalsResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96967901265855BB0070E7F7 /* GetClosedSignalsResponseMapper.swift */; };
+		96967907265857910070E7F7 /* GetOpenedSignalsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96967906265857910070E7F7 /* GetOpenedSignalsRequest.swift */; };
+		9696790C265857C40070E7F7 /* SignalsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9696790B265857C40070E7F7 /* SignalsManager.swift */; };
+		9696790F265857F70070E7F7 /* SignalsManagerCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9696790E265857F70070E7F7 /* SignalsManagerCore.swift */; };
+		969679132658588D0070E7F7 /* SignalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969679122658588D0070E7F7 /* SignalsViewController.swift */; };
+		96967916265859770070E7F7 /* SignalsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96967915265859770070E7F7 /* SignalsViewModel.swift */; };
+		96967919265859DD0070E7F7 /* SignalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96967918265859DD0070E7F7 /* SignalsView.swift */; };
+		9696791E2658E3090070E7F7 /* CryptoSignalsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9696791D2658E3090070E7F7 /* CryptoSignalsTableView.swift */; };
+		969679212658E38C0070E7F7 /* CryptoSignalsTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969679202658E38C0070E7F7 /* CryptoSignalsTableElement.swift */; };
+		969679242658E3D30070E7F7 /* CryptoSignalsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969679232658E3D30070E7F7 /* CryptoSignalsTableCell.swift */; };
+		96967928265A27B60070E7F7 /* UnlockPremiumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96967927265A27B60070E7F7 /* UnlockPremiumView.swift */; };
 		96991B93264A89DB008FFC69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96991B92264A89DB008FFC69 /* Assets.xcassets */; };
 		96991CD1264A8AD6008FFC69 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991BC2264A8AD5008FFC69 /* UIColorExtension.swift */; };
 		96991CD2264A8AD6008FFC69 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991BC3264A8AD5008FFC69 /* Collection+Extension.swift */; };
@@ -178,6 +191,19 @@
 		966E36C12653F15D00FB011D /* ExchangesCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangesCollectionCell.swift; sourceTree = "<group>"; };
 		966E36C42653F1BC00FB011D /* ExchangesCollectionElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangesCollectionElement.swift; sourceTree = "<group>"; };
 		966E36C72654023000FB011D /* OSlideRiskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSlideRiskView.swift; sourceTree = "<group>"; };
+		969678F8265853570070E7F7 /* CryptoSignal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoSignal.swift; sourceTree = "<group>"; };
+		969678FE265855460070E7F7 /* GetClosedSignalsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetClosedSignalsRequest.swift; sourceTree = "<group>"; };
+		96967901265855BB0070E7F7 /* GetClosedSignalsResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetClosedSignalsResponseMapper.swift; sourceTree = "<group>"; };
+		96967906265857910070E7F7 /* GetOpenedSignalsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOpenedSignalsRequest.swift; sourceTree = "<group>"; };
+		9696790B265857C40070E7F7 /* SignalsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalsManager.swift; sourceTree = "<group>"; };
+		9696790E265857F70070E7F7 /* SignalsManagerCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalsManagerCore.swift; sourceTree = "<group>"; };
+		969679122658588D0070E7F7 /* SignalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalsViewController.swift; sourceTree = "<group>"; };
+		96967915265859770070E7F7 /* SignalsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalsViewModel.swift; sourceTree = "<group>"; };
+		96967918265859DD0070E7F7 /* SignalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalsView.swift; sourceTree = "<group>"; };
+		9696791D2658E3090070E7F7 /* CryptoSignalsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoSignalsTableView.swift; sourceTree = "<group>"; };
+		969679202658E38C0070E7F7 /* CryptoSignalsTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoSignalsTableElement.swift; sourceTree = "<group>"; };
+		969679232658E3D30070E7F7 /* CryptoSignalsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoSignalsTableCell.swift; sourceTree = "<group>"; };
+		96967927265A27B60070E7F7 /* UnlockPremiumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockPremiumView.swift; sourceTree = "<group>"; };
 		96991B86264A89D8008FFC69 /* Cryptosignals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cryptosignals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96991B92264A89DB008FFC69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96991B97264A89DB008FFC69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -434,6 +460,97 @@
 			path = ExchangesCollection;
 			sourceTree = "<group>";
 		};
+		969678F6265853330070E7F7 /* Signals */ = {
+			isa = PBXGroup;
+			children = (
+				9696790A265857B60070E7F7 /* Manager */,
+				969678FC265854F20070E7F7 /* Requests */,
+				969678F7265853460070E7F7 /* Model */,
+			);
+			path = Signals;
+			sourceTree = "<group>";
+		};
+		969678F7265853460070E7F7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				969678F8265853570070E7F7 /* CryptoSignal.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		969678FC265854F20070E7F7 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				969679052658577D0070E7F7 /* GetOpenedSignals */,
+				969678FD265854FB0070E7F7 /* GetClosedSignals */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		969678FD265854FB0070E7F7 /* GetClosedSignals */ = {
+			isa = PBXGroup;
+			children = (
+				969678FE265855460070E7F7 /* GetClosedSignalsRequest.swift */,
+				96967901265855BB0070E7F7 /* GetClosedSignalsResponseMapper.swift */,
+			);
+			path = GetClosedSignals;
+			sourceTree = "<group>";
+		};
+		969679052658577D0070E7F7 /* GetOpenedSignals */ = {
+			isa = PBXGroup;
+			children = (
+				96967906265857910070E7F7 /* GetOpenedSignalsRequest.swift */,
+			);
+			path = GetOpenedSignals;
+			sourceTree = "<group>";
+		};
+		9696790A265857B60070E7F7 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				9696790B265857C40070E7F7 /* SignalsManager.swift */,
+				9696790E265857F70070E7F7 /* SignalsManagerCore.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		969679112658587B0070E7F7 /* Signals */ = {
+			isa = PBXGroup;
+			children = (
+				9696791B2658E29E0070E7F7 /* Views */,
+				969679122658588D0070E7F7 /* SignalsViewController.swift */,
+				96967915265859770070E7F7 /* SignalsViewModel.swift */,
+				96967918265859DD0070E7F7 /* SignalsView.swift */,
+			);
+			path = Signals;
+			sourceTree = "<group>";
+		};
+		9696791B2658E29E0070E7F7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				96967926265A27A30070E7F7 /* UnlockPremium */,
+				9696791C2658E2A40070E7F7 /* TableView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9696791C2658E2A40070E7F7 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				9696791D2658E3090070E7F7 /* CryptoSignalsTableView.swift */,
+				969679202658E38C0070E7F7 /* CryptoSignalsTableElement.swift */,
+				969679232658E3D30070E7F7 /* CryptoSignalsTableCell.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		96967926265A27A30070E7F7 /* UnlockPremium */ = {
+			isa = PBXGroup;
+			children = (
+				96967927265A27B60070E7F7 /* UnlockPremiumView.swift */,
+			);
+			path = UnlockPremium;
+			sourceTree = "<group>";
+		};
 		96991B7D264A89D8008FFC69 = {
 			isa = PBXGroup;
 			children = (
@@ -577,6 +694,7 @@
 		96991BE3264A8AD5008FFC69 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				969678F6265853330070E7F7 /* Signals */,
 				96F452B626566C9100B63D53 /* News */,
 				966E364A2653AD2700FB011D /* Content */,
 				96991BE7264A8AD5008FFC69 /* Paygate */,
@@ -655,6 +773,7 @@
 		96991C33264A8AD5008FFC69 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				969679112658587B0070E7F7 /* Signals */,
 				96F452D12656726C00B63D53 /* News */,
 				96F4527D26564F6100B63D53 /* TabController */,
 				9628AF17264ECF0B00C93AA7 /* Onboarding */,
@@ -1006,9 +1125,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				969678FF265855460070E7F7 /* GetClosedSignalsRequest.swift in Sources */,
 				96991CF2264A8AD6008FFC69 /* PaygateOption.swift in Sources */,
 				96991D58264A8AD7008FFC69 /* PaygateViewController.swift in Sources */,
 				96991CE8264A8AD6008FFC69 /* AppDelegate.swift in Sources */,
+				969679132658588D0070E7F7 /* SignalsViewController.swift in Sources */,
 				96991CF4264A8AD6008FFC69 /* ProductPrice.swift in Sources */,
 				9628B6242652943700C93AA7 /* OLevelCell.swift in Sources */,
 				96991CF8264A8AD6008FFC69 /* GetPaygateRequest.swift in Sources */,
@@ -1016,7 +1137,9 @@
 				966E36C82654023000FB011D /* OSlideRiskView.swift in Sources */,
 				96991CE7264A8AD6008FFC69 /* GradientView.swift in Sources */,
 				966E364226539ADD00FB011D /* OSlideInterestView.swift in Sources */,
+				96967919265859DD0070E7F7 /* SignalsView.swift in Sources */,
 				96991D5A264A8AD7008FFC69 /* PaygateMainInfoCell.swift in Sources */,
+				9696791E2658E3090070E7F7 /* CryptoSignalsTableView.swift in Sources */,
 				96991CF9264A8AD6008FFC69 /* GetMonetizationConfigRequest.swift in Sources */,
 				96991D5B264A8AD7008FFC69 /* PaygateOptionView.swift in Sources */,
 				966E36672653C5C200FB011D /* CurrenciesCollectionView.swift in Sources */,
@@ -1028,6 +1151,7 @@
 				96F452D32656727900B63D53 /* NewsViewController.swift in Sources */,
 				96991D2D264A8AD7008FFC69 /* SplashViewModel.swift in Sources */,
 				96991D20264A8AD7008FFC69 /* SessionManagerCore.swift in Sources */,
+				969679212658E38C0070E7F7 /* CryptoSignalsTableElement.swift in Sources */,
 				966E364D2653AD3B00FB011D /* Currency.swift in Sources */,
 				96F44DA826551F0100B63D53 /* OSlideStrategiesView.swift in Sources */,
 				966E36B82653EF5700FB011D /* SaveSelectedExchangesRequest.swift in Sources */,
@@ -1050,6 +1174,7 @@
 				96F453352656CB6000B63D53 /* PostTableElement.swift in Sources */,
 				96F44DB1265525B300B63D53 /* OQuestionFormView.swift in Sources */,
 				96F452DE26567CB500B63D53 /* NewsTableView.swift in Sources */,
+				96967907265857910070E7F7 /* GetOpenedSignalsRequest.swift in Sources */,
 				96991CE6264A8AD6008FFC69 /* CircleView.swift in Sources */,
 				96991D56264A8AD7008FFC69 /* PaygateViewControllerDelegate.swift in Sources */,
 				96991CDD264A8AD6008FFC69 /* Weak.swift in Sources */,
@@ -1082,8 +1207,10 @@
 				96F453092656A2F400B63D53 /* PostHeader.swift in Sources */,
 				966E36BF2653F12E00FB011D /* ExchangesCollectionView.swift in Sources */,
 				96F4528B26564FC200B63D53 /* TabView.swift in Sources */,
+				969678F9265853570070E7F7 /* CryptoSignal.swift in Sources */,
 				96991CD1264A8AD6008FFC69 /* UIColorExtension.swift in Sources */,
 				96F4532E2656C8FA00B63D53 /* PostTableTitleCell.swift in Sources */,
+				96967902265855BC0070E7F7 /* GetClosedSignalsResponseMapper.swift in Sources */,
 				96991D59264A8AD7008FFC69 /* PaygateMainView.swift in Sources */,
 				96F453122656A3D900B63D53 /* GetPostDetailsResponseMapper.swift in Sources */,
 				96F4528626564FAB00B63D53 /* TabCoordinator.swift in Sources */,
@@ -1095,11 +1222,13 @@
 				966E36572653AF3C00FB011D /* GetCurrenciesResponseMapper.swift in Sources */,
 				9628AF3B264ECF0B00C93AA7 /* OnboardingViewController.swift in Sources */,
 				96991CD5264A8AD6008FFC69 /* UIEdgeInsets+Extension.swift in Sources */,
+				96967916265859770070E7F7 /* SignalsViewModel.swift in Sources */,
 				966E365E2653B16300FB011D /* ContentManagerCore.swift in Sources */,
 				9628B6272652981700C93AA7 /* OSlideLevelView.swift in Sources */,
 				96F452FE2656A1BC00B63D53 /* PostView.swift in Sources */,
 				96991CEE264A8AD6008FFC69 /* PaygateManagerCore.swift in Sources */,
 				96F452CB26566E2F00B63D53 /* GetNewsRequest.swift in Sources */,
+				9696790F265857F70070E7F7 /* SignalsManagerCore.swift in Sources */,
 				96F4527F26564F9200B63D53 /* TabController.swift in Sources */,
 				96F44DAE2655257E00B63D53 /* OQuestionButton.swift in Sources */,
 				96F452C326566D5700B63D53 /* News.swift in Sources */,
@@ -1109,6 +1238,7 @@
 				966E36C52653F1BC00FB011D /* ExchangesCollectionElement.swift in Sources */,
 				96F452BC26566CD800B63D53 /* Post.swift in Sources */,
 				96F452B926566CA000B63D53 /* Feature.swift in Sources */,
+				969679242658E3D30070E7F7 /* CryptoSignalsTableCell.swift in Sources */,
 				96991D21264A8AD7008FFC69 /* SessionManager.swift in Sources */,
 				96991CDB264A8AD6008FFC69 /* Fonts.swift in Sources */,
 				966E36702653CD8800FB011D /* SaveSelectedCurrenciesRequest.swift in Sources */,
@@ -1120,7 +1250,9 @@
 				96991CF6264A8AD6008FFC69 /* PaygateMainOffer.swift in Sources */,
 				966E369F2653E18B00FB011D /* ContentMediator.swift in Sources */,
 				96F452E82656830C00B63D53 /* NewsTableElement.swift in Sources */,
+				9696790C265857C40070E7F7 /* SignalsManager.swift in Sources */,
 				96F44DB4265526F900B63D53 /* OSlideQuestionView.swift in Sources */,
+				96967928265A27B60070E7F7 /* UnlockPremiumView.swift in Sources */,
 				96F453062656A26C00B63D53 /* PostDetails.swift in Sources */,
 				966E36B52653EDBE00FB011D /* GetExchangesResponseMapper.swift in Sources */,
 				96F4529326564FFE00B63D53 /* TabItemView.swift in Sources */,
