@@ -111,7 +111,7 @@ private extension OnboardingView {
     
     func headerUpdate() {
         switch step {
-        case .started:
+        case .started, .progress:
             skipButton.isHidden = true
             progressView.isHidden = true
         default:

@@ -6,5 +6,12 @@
 //
 
 struct CryptoSignalsTableElement {
-    
+    let currencies: String
+    let type: CryptoSignal.Kind
+    let date: Date
+    let dateString: String
+    let exchange: String
+    let gain: String
+    let entryPoint: String
+    let targetPrice: String
 }

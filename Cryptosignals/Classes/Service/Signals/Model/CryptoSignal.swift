@@ -15,10 +15,11 @@ struct CryptoSignal {
     let exchangeId: Int
     let fromCurrencyId: Int
     let toCurrencyId: Int
-    let timestamp: String
+    let date: Date
+    let humanDate: String
     let type: Kind
-    let entry: Double
-    let target: Double
+    let entry: String
+    let target: String
     let gain: Double
 }
 

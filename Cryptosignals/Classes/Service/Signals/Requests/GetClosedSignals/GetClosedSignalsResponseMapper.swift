@@ -21,13 +21,21 @@ final class GetClosedSignalsResponseMapper {
                 let exchangeId = signalJSON["exchange_id"] as? Int,
                 let fromCurrencyId = signalJSON["from_currency_id"] as? Int,
                 let toCurrencyId = signalJSON["to_currency_id"] as? Int,
-                let timestamp = signalJSON["timestamp"] as? String,
+                let dateStringFormat = signalJSON["timestamp"] as? String,
+                let humanDate = signalJSON["timestamp_human"] as? String,
                 let typeValue = signalJSON["type"] as? Int,
                 let type = CryptoSignal.Kind(rawValue: typeValue),
-                let entry = signalJSON["entry"] as? Double,
-                let target = signalJSON["target"] as? Double,
+                let entry = signalJSON["entry"] as? String,
+                let target = signalJSON["target"] as? String,
                 let gain = signalJSON["gain"] as? Double
             else {
+                return nil
+            }
+            
+            let formatter = DateFormatter()
+            formatter.dateFormat = "dd.MM.yyyy"
+            
+            guard let date = formatter.date(from: dateStringFormat) else {
                 return nil
             }
             
@@ -35,7 +43,8 @@ final class GetClosedSignalsResponseMapper {
                                 exchangeId: exchangeId,
                                 fromCurrencyId: fromCurrencyId,
                                 toCurrencyId: toCurrencyId,
-                                timestamp: timestamp,
+                                date: date,
+                                humanDate: humanDate,
                                 type: type,
                                 entry: entry,
                                 target: target,

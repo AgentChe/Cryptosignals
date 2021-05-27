@@ -96,7 +96,7 @@
 "Signals.Long" = "LONG";
 "Signals.Short" = "SHORT";
 "Signals.Gain" = "Gain";
-"Signals.Percent" = "%.f2%%";
 "Signals.EntryPoint" = "Entry point";
 "Signals.TargetPrice" = "Target price";
 "Signals.UnlockPremium" = "Unlock Premium\nto access open signals";
+"Signals.SubTitle" = "%@ • %@";
