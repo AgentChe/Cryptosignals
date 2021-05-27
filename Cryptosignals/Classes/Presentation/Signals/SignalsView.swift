@@ -10,6 +10,7 @@ import UIKit
 final class SignalsView: UIView {
     lazy var titleLabel = makeTitleLabel()
     lazy var filterView = makeFilterView()
+    lazy var settingsButton = makeSettingsButton()
     lazy var tableView = makeTableView()
     lazy var unlockPremiumView = makeUnlockPremiumView()
     
@@ -53,16 +54,21 @@ private extension SignalsView {
         ])
         
         NSLayoutConstraint.activate([
+            settingsButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -11.scale),
+            settingsButton.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 206.scale : 171.scale)
+        ])
+        
+        NSLayoutConstraint.activate([
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            tableView.topAnchor.constraint(equalTo: filterView.bottomAnchor, constant: 28.scale),
+            tableView.topAnchor.constraint(equalTo: settingsButton.bottomAnchor, constant: 21.scale),
             tableView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8.scale)
         ])
         
         NSLayoutConstraint.activate([
             unlockPremiumView.leadingAnchor.constraint(equalTo: tableView.leadingAnchor),
             unlockPremiumView.trailingAnchor.constraint(equalTo: tableView.trailingAnchor),
-            unlockPremiumView.topAnchor.constraint(equalTo: tableView.topAnchor),
+            unlockPremiumView.topAnchor.constraint(equalTo: settingsButton.bottomAnchor, constant: 21.scale),
             unlockPremiumView.bottomAnchor.constraint(equalTo: tableView.bottomAnchor)
         ])
     }
@@ -95,6 +101,13 @@ private extension SignalsView {
     
     func makeFilterView() -> SignalFilterView {
         let view = SignalFilterView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
+    }
+    
+    func makeSettingsButton() -> SignalsSettingsButton {
+        let view = SignalsSettingsButton()
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

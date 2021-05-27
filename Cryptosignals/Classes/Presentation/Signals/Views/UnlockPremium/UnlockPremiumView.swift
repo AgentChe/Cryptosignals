@@ -52,6 +52,7 @@ private extension UnlockPremiumView {
     func makeImageView() -> UIImageView {
         let view = UIImageView()
         view.contentMode = .scaleAspectFill
+        view.clipsToBounds = true
         view.image = UIImage(named: "Signals.BlurPremium")
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)

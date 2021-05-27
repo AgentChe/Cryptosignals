@@ -61,6 +61,7 @@
 		96967928265A27B60070E7F7 /* UnlockPremiumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96967927265A27B60070E7F7 /* UnlockPremiumView.swift */; };
 		9696794B265A43310070E7F7 /* CryptoSignalsTableElementMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9696794A265A43310070E7F7 /* CryptoSignalsTableElementMapper.swift */; };
 		969679E4265F787F0070E7F7 /* SignalFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969679E3265F787F0070E7F7 /* SignalFilterView.swift */; };
+		969679E9265FCFFA0070E7F7 /* SignalsSettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969679E8265FCFFA0070E7F7 /* SignalsSettingsButton.swift */; };
 		96991B93264A89DB008FFC69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96991B92264A89DB008FFC69 /* Assets.xcassets */; };
 		96991CD1264A8AD6008FFC69 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991BC2264A8AD5008FFC69 /* UIColorExtension.swift */; };
 		96991CD2264A8AD6008FFC69 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991BC3264A8AD5008FFC69 /* Collection+Extension.swift */; };
@@ -208,6 +209,7 @@
 		96967927265A27B60070E7F7 /* UnlockPremiumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockPremiumView.swift; sourceTree = "<group>"; };
 		9696794A265A43310070E7F7 /* CryptoSignalsTableElementMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoSignalsTableElementMapper.swift; sourceTree = "<group>"; };
 		969679E3265F787F0070E7F7 /* SignalFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalFilterView.swift; sourceTree = "<group>"; };
+		969679E8265FCFFA0070E7F7 /* SignalsSettingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalsSettingsButton.swift; sourceTree = "<group>"; };
 		96991B86264A89D8008FFC69 /* Cryptosignals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cryptosignals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96991B92264A89DB008FFC69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96991B97264A89DB008FFC69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -535,6 +537,7 @@
 				969679E2265F78590070E7F7 /* SignalFilter */,
 				96967926265A27A30070E7F7 /* UnlockPremium */,
 				9696791C2658E2A40070E7F7 /* TableView */,
+				969679E8265FCFFA0070E7F7 /* SignalsSettingsButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1247,6 +1250,7 @@
 				9628AF3B264ECF0B00C93AA7 /* OnboardingViewController.swift in Sources */,
 				96991CD5264A8AD6008FFC69 /* UIEdgeInsets+Extension.swift in Sources */,
 				96967916265859770070E7F7 /* SignalsViewModel.swift in Sources */,
+				969679E9265FCFFA0070E7F7 /* SignalsSettingsButton.swift in Sources */,
 				966E365E2653B16300FB011D /* ContentManagerCore.swift in Sources */,
 				9628B6272652981700C93AA7 /* OSlideLevelView.swift in Sources */,
 				96F452FE2656A1BC00B63D53 /* PostView.swift in Sources */,

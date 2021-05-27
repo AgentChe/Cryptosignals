@@ -44,6 +44,7 @@ final class SignalsViewController: UIViewController {
         
         addUnlockPremiumAction()
         addFilterActions()
+        addSettingsAction()
     }
 }
 
@@ -110,6 +111,18 @@ private extension SignalsViewController {
             .subscribe(onNext: { [weak self] filter in
                 self?.viewModel.filter.accept(filter)
                 self?.mainView.filterView.filter = filter
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    func addSettingsAction() {
+        let tapGesture = UITapGestureRecognizer()
+        mainView.settingsButton.isUserInteractionEnabled = true
+        mainView.settingsButton.addGestureRecognizer(tapGesture)
+        
+        tapGesture.rx.event
+            .subscribe(onNext: { event in
+                print("open settings")
             })
             .disposed(by: disposeBag)
     }
