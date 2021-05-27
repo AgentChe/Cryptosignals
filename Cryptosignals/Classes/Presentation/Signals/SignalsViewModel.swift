@@ -16,6 +16,8 @@ final class SignalsViewModel {
     
     private let kind: SignalsViewController.Kind
     
+    lazy var filter = BehaviorRelay<SignalFilterView.Filter>(value: .today)
+    
     lazy var step = makeStep()
     
     private lazy var signalsManager = SignalsManagerCore()
@@ -62,6 +64,17 @@ private extension SignalsViewModel {
     func getElemenets() -> Driver<[CryptoSignalsTableElement]> {
         getSignals()
             .flatMapLatest(mapToElements)
+            .flatMapLatest { [weak self] elements -> Driver<[CryptoSignalsTableElement]> in
+                guard let self = self else {
+                    return .never()
+                }
+                
+                return self.filter
+                    .asDriver(onErrorDriveWith: .never())
+                    .map { filter -> [CryptoSignalsTableElement] in
+                        return self.filter(filter, elements: elements)
+                    }
+            }
     }
     
     func getSignals() -> Driver<[CryptoSignal]> {
@@ -138,6 +151,26 @@ private extension SignalsViewModel {
                                                         exchanges: exchanges,
                                                         currencies: currencies)
                 }
+        }
+    }
+    
+    func filter(_ filter: SignalFilterView.Filter, elements: [CryptoSignalsTableElement]) -> [CryptoSignalsTableElement] {
+        switch filter {
+        case .today:
+            return elements.filter { element -> Bool in
+                Calendar.current.isDateInToday(element.date)
+            }
+        case .yesterday:
+            return elements.filter { element -> Bool in
+                Calendar.current.isDateInYesterday(element.date)
+            }
+        case .lastWeek:
+            let startDate = Calendar.current.date(byAdding: .day, value: -7, to: Date()) ?? Date()
+            return elements.filter { element -> Bool in
+                element.date > startDate
+            }
+        case .older:
+            return elements
         }
     }
 }

@@ -9,6 +9,7 @@ import UIKit
 
 final class SignalsView: UIView {
     lazy var titleLabel = makeTitleLabel()
+    lazy var filterView = makeFilterView()
     lazy var tableView = makeTableView()
     lazy var unlockPremiumView = makeUnlockPremiumView()
     
@@ -45,9 +46,16 @@ private extension SignalsView {
         ])
         
         NSLayoutConstraint.activate([
+            filterView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16.scale),
+            filterView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16.scale),
+            filterView.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 155.scale : 120.scale),
+            filterView.heightAnchor.constraint(equalToConstant: 32.scale)
+        ])
+        
+        NSLayoutConstraint.activate([
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            tableView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 28.scale),
+            tableView.topAnchor.constraint(equalTo: filterView.bottomAnchor, constant: 28.scale),
             tableView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8.scale)
         ])
         
@@ -80,6 +88,13 @@ private extension SignalsView {
         let view = UILabel()
         view.numberOfLines = 0
         view.attributedText = title.attributed(with: attrs)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
+    }
+    
+    func makeFilterView() -> SignalFilterView {
+        let view = SignalFilterView()
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

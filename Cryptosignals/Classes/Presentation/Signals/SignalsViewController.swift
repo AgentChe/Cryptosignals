@@ -43,6 +43,7 @@ final class SignalsViewController: UIViewController {
             .disposed(by: disposeBag)
         
         addUnlockPremiumAction()
+        addFilterActions()
     }
 }
 
@@ -77,6 +78,38 @@ private extension SignalsViewController {
         tapGesture.rx.event
             .subscribe(onNext: { _ in
                 UIApplication.shared.keyWindow?.rootViewController?.present(PaygateViewController.make(), animated: true)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    func addFilterActions() {
+        let todayTapGesture = UITapGestureRecognizer()
+        mainView.filterView.todayLabel.isUserInteractionEnabled = true
+        mainView.filterView.todayLabel.addGestureRecognizer(todayTapGesture)
+        
+        let yesterdayTapGesture = UITapGestureRecognizer()
+        mainView.filterView.yesterdayLabel.isUserInteractionEnabled = true
+        mainView.filterView.yesterdayLabel.addGestureRecognizer(yesterdayTapGesture)
+        
+        let lastWeekTapGesture = UITapGestureRecognizer()
+        mainView.filterView.lastWeekLabel.isUserInteractionEnabled = true
+        mainView.filterView.lastWeekLabel.addGestureRecognizer(lastWeekTapGesture)
+        
+        let olderTapGesture = UITapGestureRecognizer()
+        mainView.filterView.olderLabel.isUserInteractionEnabled = true
+        mainView.filterView.olderLabel.addGestureRecognizer(olderTapGesture)
+        
+        Observable
+            .merge(
+                todayTapGesture.rx.event.map { event in SignalFilterView.Filter.today },
+                yesterdayTapGesture.rx.event.map { event in SignalFilterView.Filter.yesterday },
+                lastWeekTapGesture.rx.event.map { event in SignalFilterView.Filter.lastWeek },
+                olderTapGesture.rx.event.map { event in SignalFilterView.Filter.older }
+            )
+            .startWith(.today)
+            .subscribe(onNext: { [weak self] filter in
+                self?.viewModel.filter.accept(filter)
+                self?.mainView.filterView.filter = filter
             })
             .disposed(by: disposeBag)
     }
