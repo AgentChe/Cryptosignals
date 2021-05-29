@@ -100,3 +100,10 @@
 "Signals.TargetPrice" = "Target price";
 "Signals.UnlockPremium" = "Unlock Premium\nto access open signals";
 "Signals.SubTitle" = "%@ • %@";
+
+// MARK: Settings
+"Settings.Title" = "Settings";
+"Settings.Exchange" = "Exchange";
+"Settings.All" = "All";
+"Settings.Tokens" = "Tokens";
+"Settings.SearchPlaceholder" = "“BTC” or “Bitcoin”";

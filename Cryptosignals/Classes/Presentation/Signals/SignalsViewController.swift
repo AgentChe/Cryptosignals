@@ -121,8 +121,9 @@ private extension SignalsViewController {
         mainView.settingsButton.addGestureRecognizer(tapGesture)
         
         tapGesture.rx.event
-            .subscribe(onNext: { event in
-                print("open settings")
+            .subscribe(onNext: { [weak self] event in
+                let vc = SettingsViewController.make()
+                self?.navigationController?.present(vc, animated: true)
             })
             .disposed(by: disposeBag)
     }

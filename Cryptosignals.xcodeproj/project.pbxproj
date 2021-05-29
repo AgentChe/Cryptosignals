@@ -62,6 +62,13 @@
 		9696794B265A43310070E7F7 /* CryptoSignalsTableElementMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9696794A265A43310070E7F7 /* CryptoSignalsTableElementMapper.swift */; };
 		969679E4265F787F0070E7F7 /* SignalFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969679E3265F787F0070E7F7 /* SignalFilterView.swift */; };
 		969679E9265FCFFA0070E7F7 /* SignalsSettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969679E8265FCFFA0070E7F7 /* SignalsSettingsButton.swift */; };
+		969679ED265FD8550070E7F7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969679EC265FD8550070E7F7 /* SettingsViewController.swift */; };
+		969679F0265FD87F0070E7F7 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969679EF265FD87F0070E7F7 /* SettingsViewModel.swift */; };
+		969679F3265FD90E0070E7F7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969679F2265FD90E0070E7F7 /* SettingsView.swift */; };
+		96967C2A266214660070E7F7 /* SettinsSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96967C29266214650070E7F7 /* SettinsSearchView.swift */; };
+		96967C2E266217E20070E7F7 /* TokensTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96967C2D266217E20070E7F7 /* TokensTableView.swift */; };
+		96967C31266217F00070E7F7 /* TokensTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96967C30266217F00070E7F7 /* TokensTableViewCell.swift */; };
+		96967C34266217FF0070E7F7 /* TokensTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96967C33266217FF0070E7F7 /* TokensTableElement.swift */; };
 		96991B93264A89DB008FFC69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96991B92264A89DB008FFC69 /* Assets.xcassets */; };
 		96991CD1264A8AD6008FFC69 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991BC2264A8AD5008FFC69 /* UIColorExtension.swift */; };
 		96991CD2264A8AD6008FFC69 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991BC3264A8AD5008FFC69 /* Collection+Extension.swift */; };
@@ -210,6 +217,13 @@
 		9696794A265A43310070E7F7 /* CryptoSignalsTableElementMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoSignalsTableElementMapper.swift; sourceTree = "<group>"; };
 		969679E3265F787F0070E7F7 /* SignalFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalFilterView.swift; sourceTree = "<group>"; };
 		969679E8265FCFFA0070E7F7 /* SignalsSettingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalsSettingsButton.swift; sourceTree = "<group>"; };
+		969679EC265FD8550070E7F7 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		969679EF265FD87F0070E7F7 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		969679F2265FD90E0070E7F7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		96967C29266214650070E7F7 /* SettinsSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettinsSearchView.swift; sourceTree = "<group>"; };
+		96967C2D266217E20070E7F7 /* TokensTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensTableView.swift; sourceTree = "<group>"; };
+		96967C30266217F00070E7F7 /* TokensTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensTableViewCell.swift; sourceTree = "<group>"; };
+		96967C33266217FF0070E7F7 /* TokensTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensTableElement.swift; sourceTree = "<group>"; };
 		96991B86264A89D8008FFC69 /* Cryptosignals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cryptosignals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96991B92264A89DB008FFC69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96991B97264A89DB008FFC69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -576,6 +590,36 @@
 			path = SignalFilter;
 			sourceTree = "<group>";
 		};
+		969679EB265FD8460070E7F7 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				969679F5265FD9570070E7F7 /* Views */,
+				969679EC265FD8550070E7F7 /* SettingsViewController.swift */,
+				969679EF265FD87F0070E7F7 /* SettingsViewModel.swift */,
+				969679F2265FD90E0070E7F7 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		969679F5265FD9570070E7F7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				96967C2C266217D40070E7F7 /* TokensTable */,
+				96967C29266214650070E7F7 /* SettinsSearchView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		96967C2C266217D40070E7F7 /* TokensTable */ = {
+			isa = PBXGroup;
+			children = (
+				96967C2D266217E20070E7F7 /* TokensTableView.swift */,
+				96967C30266217F00070E7F7 /* TokensTableViewCell.swift */,
+				96967C33266217FF0070E7F7 /* TokensTableElement.swift */,
+			);
+			path = TokensTable;
+			sourceTree = "<group>";
+		};
 		96991B7D264A89D8008FFC69 = {
 			isa = PBXGroup;
 			children = (
@@ -798,6 +842,7 @@
 		96991C33264A8AD5008FFC69 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				969679EB265FD8460070E7F7 /* Settings */,
 				969679112658587B0070E7F7 /* Signals */,
 				96F452D12656726C00B63D53 /* News */,
 				96F4527D26564F6100B63D53 /* TabController */,
@@ -1155,6 +1200,7 @@
 				96991D58264A8AD7008FFC69 /* PaygateViewController.swift in Sources */,
 				96991CE8264A8AD6008FFC69 /* AppDelegate.swift in Sources */,
 				969679132658588D0070E7F7 /* SignalsViewController.swift in Sources */,
+				96967C2E266217E20070E7F7 /* TokensTableView.swift in Sources */,
 				9696794B265A43310070E7F7 /* CryptoSignalsTableElementMapper.swift in Sources */,
 				96991CF4264A8AD6008FFC69 /* ProductPrice.swift in Sources */,
 				9628B6242652943700C93AA7 /* OLevelCell.swift in Sources */,
@@ -1176,6 +1222,7 @@
 				96F452FB2656A1B300B63D53 /* PostViewModel.swift in Sources */,
 				96F452D32656727900B63D53 /* NewsViewController.swift in Sources */,
 				96991D2D264A8AD7008FFC69 /* SplashViewModel.swift in Sources */,
+				969679ED265FD8550070E7F7 /* SettingsViewController.swift in Sources */,
 				96991D20264A8AD7008FFC69 /* SessionManagerCore.swift in Sources */,
 				969679212658E38C0070E7F7 /* CryptoSignalsTableElement.swift in Sources */,
 				966E364D2653AD3B00FB011D /* Currency.swift in Sources */,
@@ -1191,6 +1238,7 @@
 				969679E4265F787F0070E7F7 /* SignalFilterView.swift in Sources */,
 				96991CD8264A8AD6008FFC69 /* Scalable.swift in Sources */,
 				96F4532D2656C8FA00B63D53 /* PostTablePostCell.swift in Sources */,
+				96967C34266217FF0070E7F7 /* TokensTableElement.swift in Sources */,
 				96F452D92656731900B63D53 /* NewsView.swift in Sources */,
 				96991CF7264A8AD6008FFC69 /* PaygateSpecialOffer.swift in Sources */,
 				96F452F72656A14500B63D53 /* PostViewController.swift in Sources */,
@@ -1242,6 +1290,7 @@
 				96F453122656A3D900B63D53 /* GetPostDetailsResponseMapper.swift in Sources */,
 				96F4528626564FAB00B63D53 /* TabCoordinator.swift in Sources */,
 				96991D1F264A8AD7008FFC69 /* Session.swift in Sources */,
+				96967C2A266214660070E7F7 /* SettinsSearchView.swift in Sources */,
 				96991D55264A8AD7008FFC69 /* PaygateViewModel.swift in Sources */,
 				96991CD9264A8AD6008FFC69 /* TextAttributes.swift in Sources */,
 				966E365B2653B07900FB011D /* ContentManager.swift in Sources */,
@@ -1260,6 +1309,7 @@
 				96F4527F26564F9200B63D53 /* TabController.swift in Sources */,
 				96F44DAE2655257E00B63D53 /* OQuestionButton.swift in Sources */,
 				96F452C326566D5700B63D53 /* News.swift in Sources */,
+				969679F0265FD87F0070E7F7 /* SettingsViewModel.swift in Sources */,
 				966E364526539B2500FB011D /* OInterestCell.swift in Sources */,
 				96991D5C264A8AD7008FFC69 /* PaygateSpecialOfferView.swift in Sources */,
 				96F453022656A1EC00B63D53 /* PostTableView.swift in Sources */,
@@ -1279,6 +1329,7 @@
 				966E369F2653E18B00FB011D /* ContentMediator.swift in Sources */,
 				96F452E82656830C00B63D53 /* NewsTableElement.swift in Sources */,
 				9696790C265857C40070E7F7 /* SignalsManager.swift in Sources */,
+				96967C31266217F00070E7F7 /* TokensTableViewCell.swift in Sources */,
 				96F44DB4265526F900B63D53 /* OSlideQuestionView.swift in Sources */,
 				96967928265A27B60070E7F7 /* UnlockPremiumView.swift in Sources */,
 				96F453062656A26C00B63D53 /* PostDetails.swift in Sources */,
@@ -1290,6 +1341,7 @@
 				96991CD2264A8AD6008FFC69 /* Collection+Extension.swift in Sources */,
 				966E367E2653D11600FB011D /* GetContentResponseMapper.swift in Sources */,
 				966E36532653ADB300FB011D /* GetCurrenciesRequest.swift in Sources */,
+				969679F3265FD90E0070E7F7 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
