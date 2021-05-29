@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 final class SettingsViewController: UIViewController {
     lazy var mainView = SettingsView()
@@ -23,8 +24,30 @@ final class SettingsViewController: UIViewController {
         super.viewDidLoad()
         
         mainView.closeButton.rx.tap
-            .subscribe(onNext: { [weak self] in
-                self?.dismiss(animated: true)
+            .asDriver(onErrorDriveWith: .never())
+            .flatMapLatest { [weak self] _ -> Driver<Bool> in
+                guard let self = self else {
+                    return .never()
+                }
+                
+                let exchangesIds = [Int]()
+                
+                let currenciesIds = self.mainView
+                    .tokensTableView
+                    .elements
+                    .filter { $0.isSelected }
+                    .map { $0.currency.id }
+                
+                return self.viewModel
+                    .save(exchangesIds: exchangesIds,
+                          currenciesIds: currenciesIds)
+            }
+            .drive(onNext: { [weak self] success in
+                if success {
+                    self?.dismiss(animated: true)
+                } else {
+                    Toast.notify(with: "Settings.FailedToSave".localized, style: .danger)
+                }
             })
             .disposed(by: disposeBag)
         

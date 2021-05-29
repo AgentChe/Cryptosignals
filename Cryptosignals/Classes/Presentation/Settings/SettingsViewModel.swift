@@ -16,6 +16,20 @@ final class SettingsViewModel {
     private lazy var contentManager = ContentManagerCore()
     
     private lazy var content = makeContent()
+    
+    func save(exchangesIds: [Int], currenciesIds: [Int]) -> Driver<Bool> {
+        Driver
+            .zip(
+                contentManager
+                    .saveSelected(currenciesIds: currenciesIds)
+                    .asDriver(onErrorJustReturn: false),
+                
+                contentManager
+                    .saveSelected(exchangesIds: exchangesIds)
+                    .asDriver(onErrorJustReturn: false)
+            )
+            .map { $0 && $1 }
+    }
 }
 
 // MARK: Private
