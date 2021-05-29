@@ -37,7 +37,7 @@ private extension STAllExchangesView {
             searchView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16.scale),
             searchView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16.scale),
             searchView.heightAnchor.constraint(equalToConstant: 36.scale),
-            searchView.topAnchor.constraint(equalTo: topAnchor, constant: 119.scale)
+            searchView.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 119.scale : 90.scale)
         ])
         
         NSLayoutConstraint.activate([

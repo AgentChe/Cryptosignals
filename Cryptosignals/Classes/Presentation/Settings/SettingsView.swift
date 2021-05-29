@@ -47,7 +47,7 @@ private extension SettingsView {
     func makeConstraints() {
         NSLayoutConstraint.activate([
             exchangesTitleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16.scale),
-            exchangesTitleLabel.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 119.scale : 110.scale)
+            exchangesTitleLabel.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 119.scale : 90.scale)
         ])
         
         NSLayoutConstraint.activate([
@@ -66,7 +66,7 @@ private extension SettingsView {
         
         NSLayoutConstraint.activate([
             tokensTitleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16.scale),
-            tokensTitleLabel.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 215.scale : 215.scale)
+            tokensTitleLabel.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 215.scale : 186.scale)
         ])
         
         NSLayoutConstraint.activate([
