@@ -44,17 +44,7 @@ extension TokensTableView: UITableViewDataSource {
 }
 
 // MARK: UITableViewDelegate
-extension TokensTableView: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = UIView()
-        view.backgroundColor = UIColor.clear
-        return view
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        16.scale
-    }
-    
+extension TokensTableView: UITableViewDelegate {    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         62.scale
     }

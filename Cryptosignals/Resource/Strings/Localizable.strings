@@ -108,3 +108,4 @@
 "Settings.Tokens" = "Tokens";
 "Settings.SearchPlaceholder" = "“BTC” or “Bitcoin”";
 "Settings.FailedToSave" = "Failed to save";
+"Settings.SearchExchanges" = "“Binance”";

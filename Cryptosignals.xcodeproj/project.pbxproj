@@ -46,6 +46,8 @@
 		966E36C22653F15D00FB011D /* ExchangesCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966E36C12653F15D00FB011D /* ExchangesCollectionCell.swift */; };
 		966E36C52653F1BC00FB011D /* ExchangesCollectionElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966E36C42653F1BC00FB011D /* ExchangesCollectionElement.swift */; };
 		966E36C82654023000FB011D /* OSlideRiskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966E36C72654023000FB011D /* OSlideRiskView.swift */; };
+		967819702662A3FF0033134D /* STAllExchangesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9678196F2662A3FF0033134D /* STAllExchangesTableView.swift */; };
+		967819912662A40F0033134D /* STAllExchangesTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967819902662A40F0033134D /* STAllExchangesTableCell.swift */; };
 		969678F9265853570070E7F7 /* CryptoSignal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969678F8265853570070E7F7 /* CryptoSignal.swift */; };
 		969678FF265855460070E7F7 /* GetClosedSignalsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969678FE265855460070E7F7 /* GetClosedSignalsRequest.swift */; };
 		96967902265855BC0070E7F7 /* GetClosedSignalsResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96967901265855BB0070E7F7 /* GetClosedSignalsResponseMapper.swift */; };
@@ -207,6 +209,8 @@
 		966E36C12653F15D00FB011D /* ExchangesCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangesCollectionCell.swift; sourceTree = "<group>"; };
 		966E36C42653F1BC00FB011D /* ExchangesCollectionElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangesCollectionElement.swift; sourceTree = "<group>"; };
 		966E36C72654023000FB011D /* OSlideRiskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSlideRiskView.swift; sourceTree = "<group>"; };
+		9678196F2662A3FF0033134D /* STAllExchangesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STAllExchangesTableView.swift; sourceTree = "<group>"; };
+		967819902662A40F0033134D /* STAllExchangesTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STAllExchangesTableCell.swift; sourceTree = "<group>"; };
 		969678F8265853570070E7F7 /* CryptoSignal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoSignal.swift; sourceTree = "<group>"; };
 		969678FE265855460070E7F7 /* GetClosedSignalsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetClosedSignalsRequest.swift; sourceTree = "<group>"; };
 		96967901265855BB0070E7F7 /* GetClosedSignalsResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetClosedSignalsResponseMapper.swift; sourceTree = "<group>"; };
@@ -658,6 +662,8 @@
 		96967C4A2662820B0070E7F7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9678196F2662A3FF0033134D /* STAllExchangesTableView.swift */,
+				967819902662A40F0033134D /* STAllExchangesTableCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1266,6 +1272,7 @@
 				96F452D32656727900B63D53 /* NewsViewController.swift in Sources */,
 				96991D2D264A8AD7008FFC69 /* SplashViewModel.swift in Sources */,
 				969679ED265FD8550070E7F7 /* SettingsViewController.swift in Sources */,
+				967819912662A40F0033134D /* STAllExchangesTableCell.swift in Sources */,
 				96991D20264A8AD7008FFC69 /* SessionManagerCore.swift in Sources */,
 				969679212658E38C0070E7F7 /* CryptoSignalsTableElement.swift in Sources */,
 				966E364D2653AD3B00FB011D /* Currency.swift in Sources */,
@@ -1320,6 +1327,7 @@
 				96F44DB82655431800B63D53 /* OProgressCell.swift in Sources */,
 				96967C3B26625F910070E7F7 /* STExchangesCollectionCell.swift in Sources */,
 				96F44DAB26551F2500B63D53 /* OStrategyCell.swift in Sources */,
+				967819702662A3FF0033134D /* STAllExchangesTableView.swift in Sources */,
 				96F453272656C8EB00B63D53 /* NewsTableFeatureCell.swift in Sources */,
 				966E36B22653ED8200FB011D /* GetExchangesRequest.swift in Sources */,
 				96F4532F2656C8FA00B63D53 /* PostTableHeaderCell.swift in Sources */,

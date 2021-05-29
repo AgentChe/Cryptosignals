@@ -43,8 +43,14 @@ final class SettingsViewController: UIViewController {
         
         mainView.allExchangesButton.rx.tap
             .subscribe(onNext: { [weak self] in
-                let vc = STAllExchangesViewController.make()
-                self?.navigationController?.pushViewController(vc, animated: true)
+                guard let self = self else {
+                    return
+                }
+                
+                let elements = self.mainView.exchangesCollectionView.elements
+                let vc = STAllExchangesViewController.make(elements: elements)
+                vc.delegate = self
+                self.navigationController?.pushViewController(vc, animated: true)
             })
             .disposed(by: disposeBag)
         
@@ -60,6 +66,13 @@ extension SettingsViewController {
         vc.navigationItem.title = "Settings.Title".localized
         vc.modalPresentationStyle = .overFullScreen
         return vc
+    }
+}
+
+// MARK: STAllExchangesViewControllerDelegate
+extension SettingsViewController: STAllExchangesViewControllerDelegate {
+    func allExchangesDidChangeSelection() {
+        mainView.exchangesCollectionView.reloadData()
     }
 }
 
