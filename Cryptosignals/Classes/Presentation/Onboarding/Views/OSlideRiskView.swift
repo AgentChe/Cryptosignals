@@ -10,7 +10,11 @@ import UIKit
 final class OSlideRiskView: OSlideView {
     lazy var titleLabel = makeTitleLabel()
     lazy var subTitleLabel = makeSubTitleLabel()
+    lazy var profitTitleLabel = makeProfitTitleLabel()
+    lazy var slider = makeSlider()
     lazy var button = makeButton()
+    
+    private lazy var sliderValueLabel = makeSliderValueLabel()
     
     override init(step: OnboardingView.Step) {
         super.init(step: step)
@@ -21,11 +25,47 @@ final class OSlideRiskView: OSlideView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        movedSlider()
+    }
 }
 
 // MARK: Private
 private extension OSlideRiskView {
+    @objc
+    func movedSlider() {
+        slider.value = round(slider.value)
+        
+        let value = Int(slider.value)
+        
+        guard value <= 7 else {
+            return
+        }
+        
+        updateSliderValue(with: value)
+    }
     
+    func updateSliderValue(with value: Int) {
+        switch value {
+        case 1, 2, 3, 4, 5:
+            sliderValueLabel.text = String(format: "1:%i", value)
+        case 6:
+            sliderValueLabel.text = "1:10"
+        case 7:
+            sliderValueLabel.text = "1:20"
+        default:
+            break
+        }
+        
+        sliderValueLabel.sizeToFit()
+
+        let trackRect = slider.trackRect(forBounds: slider.frame)
+        let thumbRect = slider.thumbRect(forBounds: slider.bounds, trackRect: trackRect, value: roundf(slider.value))
+        sliderValueLabel.center = CGPoint(x: thumbRect.midX, y: slider.frame.minY - sliderValueLabel.frame.height)
+    }
 }
 
 // MARK: Make constraints
@@ -41,6 +81,17 @@ private extension OSlideRiskView {
             subTitleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24.scale),
             subTitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -24.scale),
             subTitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 16.scale)
+        ])
+        
+        NSLayoutConstraint.activate([
+            profitTitleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32.scale),
+            profitTitleLabel.topAnchor.constraint(equalTo: subTitleLabel.bottomAnchor, constant: 24.scale)
+        ])
+        
+        NSLayoutConstraint.activate([
+            slider.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32.scale),
+            slider.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32.scale),
+            slider.bottomAnchor.constraint(equalTo: button.topAnchor, constant: -44.scale)
         ])
         
         NSLayoutConstraint.activate([
@@ -79,6 +130,40 @@ private extension OSlideRiskView {
         let view = UILabel()
         view.attributedText = "Onboarding.Risk.SubTitle".localized.attributed(with: attrs)
         view.numberOfLines = 0
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
+    }
+    
+    func makeProfitTitleLabel() -> UILabel {
+        let attrs = TextAttributes()
+            .textColor(UIColor.white)
+            .font(Fonts.SFProDisplay.regular(size: 17.scale))
+            .lineHeight(23.scale)
+        
+        let view = UILabel()
+        view.attributedText = "Onboarding.Risk.Profit".localized.attributed(with: attrs)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
+    }
+    
+    func makeSliderValueLabel() -> UILabel {
+        let view = UILabel()
+        view.textColor = UIColor.white
+        view.font = Fonts.SFProDisplay.semiBold(size: 28.scale)
+        addSubview(view)
+        return view
+    }
+    
+    func makeSlider() -> UISlider {
+        let view = UISlider()
+        view.layer.cornerRadius = 4.scale
+        view.minimumValue = 1
+        view.maximumValue = 7
+        view.minimumTrackTintColor = UIColor(integralRed: 63, green: 166, blue: 255)
+        view.maximumTrackTintColor = UIColor(integralRed: 81, green: 85, blue: 149, alpha: 0.2)
+        view.addTarget(self, action: #selector(movedSlider), for: .valueChanged)
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view
