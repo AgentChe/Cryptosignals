@@ -11,6 +11,7 @@ import RxCocoa
 final class SettingsViewModel {
     lazy var searchToken = BehaviorRelay<String>(value: "")
     
+    lazy var exchanges = makeExchanges()
     lazy var tokens = makeTokens()
     
     private lazy var contentManager = ContentManagerCore()
@@ -34,6 +35,24 @@ final class SettingsViewModel {
 
 // MARK: Private
 private extension SettingsViewModel {
+    func makeExchanges() -> Driver<[STExchangesCollectionElement]> {
+        return Driver
+            .zip(
+                content,
+                
+                contentManager
+                    .retrieveExchanges(forceUpdate: false)
+                    .asDriver(onErrorJustReturn: [])
+            ) { content, exchanges -> [STExchangesCollectionElement] in
+                let selectedExchangesIds = content?.exchanges ?? []
+                
+                return exchanges
+                    .map { exchange -> STExchangesCollectionElement in
+                        STExchangesCollectionElement(exchange: exchange,
+                                                     isSelected: selectedExchangesIds.contains(exchange.id)) }
+            }
+    }
+    
     func makeTokens() -> Driver<[TokensTableElement]> {
         let elements = Driver
             .zip(

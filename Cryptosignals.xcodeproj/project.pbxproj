@@ -69,6 +69,12 @@
 		96967C2E266217E20070E7F7 /* TokensTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96967C2D266217E20070E7F7 /* TokensTableView.swift */; };
 		96967C31266217F00070E7F7 /* TokensTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96967C30266217F00070E7F7 /* TokensTableViewCell.swift */; };
 		96967C34266217FF0070E7F7 /* TokensTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96967C33266217FF0070E7F7 /* TokensTableElement.swift */; };
+		96967C3826625F440070E7F7 /* STExchangesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96967C3726625F440070E7F7 /* STExchangesCollectionView.swift */; };
+		96967C3B26625F910070E7F7 /* STExchangesCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96967C3A26625F910070E7F7 /* STExchangesCollectionCell.swift */; };
+		96967C3E26625F9E0070E7F7 /* STExchangesCollectionElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96967C3D26625F9E0070E7F7 /* STExchangesCollectionElement.swift */; };
+		96967C42266281AE0070E7F7 /* STAllExchangesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96967C41266281AE0070E7F7 /* STAllExchangesViewController.swift */; };
+		96967C45266281F90070E7F7 /* STAllExchangesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96967C44266281F90070E7F7 /* STAllExchangesViewModel.swift */; };
+		96967C48266282020070E7F7 /* STAllExchangesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96967C47266282020070E7F7 /* STAllExchangesView.swift */; };
 		96991B93264A89DB008FFC69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96991B92264A89DB008FFC69 /* Assets.xcassets */; };
 		96991CD1264A8AD6008FFC69 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991BC2264A8AD5008FFC69 /* UIColorExtension.swift */; };
 		96991CD2264A8AD6008FFC69 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96991BC3264A8AD5008FFC69 /* Collection+Extension.swift */; };
@@ -224,6 +230,12 @@
 		96967C2D266217E20070E7F7 /* TokensTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensTableView.swift; sourceTree = "<group>"; };
 		96967C30266217F00070E7F7 /* TokensTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensTableViewCell.swift; sourceTree = "<group>"; };
 		96967C33266217FF0070E7F7 /* TokensTableElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensTableElement.swift; sourceTree = "<group>"; };
+		96967C3726625F440070E7F7 /* STExchangesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STExchangesCollectionView.swift; sourceTree = "<group>"; };
+		96967C3A26625F910070E7F7 /* STExchangesCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STExchangesCollectionCell.swift; sourceTree = "<group>"; };
+		96967C3D26625F9E0070E7F7 /* STExchangesCollectionElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STExchangesCollectionElement.swift; sourceTree = "<group>"; };
+		96967C41266281AE0070E7F7 /* STAllExchangesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STAllExchangesViewController.swift; sourceTree = "<group>"; };
+		96967C44266281F90070E7F7 /* STAllExchangesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STAllExchangesViewModel.swift; sourceTree = "<group>"; };
+		96967C47266282020070E7F7 /* STAllExchangesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STAllExchangesView.swift; sourceTree = "<group>"; };
 		96991B86264A89D8008FFC69 /* Cryptosignals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cryptosignals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96991B92264A89DB008FFC69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96991B97264A89DB008FFC69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -593,6 +605,7 @@
 		969679EB265FD8460070E7F7 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				96967C40266281990070E7F7 /* STAllExchanges */,
 				969679F5265FD9570070E7F7 /* Views */,
 				969679EC265FD8550070E7F7 /* SettingsViewController.swift */,
 				969679EF265FD87F0070E7F7 /* SettingsViewModel.swift */,
@@ -604,6 +617,7 @@
 		969679F5265FD9570070E7F7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				96967C3626625EF20070E7F7 /* ExchangesCollection */,
 				96967C2C266217D40070E7F7 /* TokensTable */,
 				96967C29266214650070E7F7 /* SettinsSearchView.swift */,
 			);
@@ -618,6 +632,34 @@
 				96967C33266217FF0070E7F7 /* TokensTableElement.swift */,
 			);
 			path = TokensTable;
+			sourceTree = "<group>";
+		};
+		96967C3626625EF20070E7F7 /* ExchangesCollection */ = {
+			isa = PBXGroup;
+			children = (
+				96967C3726625F440070E7F7 /* STExchangesCollectionView.swift */,
+				96967C3A26625F910070E7F7 /* STExchangesCollectionCell.swift */,
+				96967C3D26625F9E0070E7F7 /* STExchangesCollectionElement.swift */,
+			);
+			path = ExchangesCollection;
+			sourceTree = "<group>";
+		};
+		96967C40266281990070E7F7 /* STAllExchanges */ = {
+			isa = PBXGroup;
+			children = (
+				96967C4A2662820B0070E7F7 /* Views */,
+				96967C41266281AE0070E7F7 /* STAllExchangesViewController.swift */,
+				96967C44266281F90070E7F7 /* STAllExchangesViewModel.swift */,
+				96967C47266282020070E7F7 /* STAllExchangesView.swift */,
+			);
+			path = STAllExchanges;
+			sourceTree = "<group>";
+		};
+		96967C4A2662820B0070E7F7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		96991B7D264A89D8008FFC69 = {
@@ -1220,6 +1262,7 @@
 				96991CDC264A8AD6008FFC69 /* SignError.swift in Sources */,
 				96991D57264A8AD7008FFC69 /* PaygateView.swift in Sources */,
 				96F452FB2656A1B300B63D53 /* PostViewModel.swift in Sources */,
+				96967C42266281AE0070E7F7 /* STAllExchangesViewController.swift in Sources */,
 				96F452D32656727900B63D53 /* NewsViewController.swift in Sources */,
 				96991D2D264A8AD7008FFC69 /* SplashViewModel.swift in Sources */,
 				969679ED265FD8550070E7F7 /* SettingsViewController.swift in Sources */,
@@ -1229,6 +1272,7 @@
 				96F44DA826551F0100B63D53 /* OSlideStrategiesView.swift in Sources */,
 				966E36B82653EF5700FB011D /* SaveSelectedExchangesRequest.swift in Sources */,
 				96991CE0264A8AD6008FFC69 /* NursingNavigationController.swift in Sources */,
+				96967C3E26625F9E0070E7F7 /* STExchangesCollectionElement.swift in Sources */,
 				96F452D6265672D600B63D53 /* NewsViewModel.swift in Sources */,
 				96F453262656C8EB00B63D53 /* NewsTableTitleCell.swift in Sources */,
 				966E36652653C5C200FB011D /* CurrenciesCollectionLayout.swift in Sources */,
@@ -1274,6 +1318,7 @@
 				96F4529026564FDD00B63D53 /* TabBar.swift in Sources */,
 				96991CDF264A8AD6008FFC69 /* Toast.swift in Sources */,
 				96F44DB82655431800B63D53 /* OProgressCell.swift in Sources */,
+				96967C3B26625F910070E7F7 /* STExchangesCollectionCell.swift in Sources */,
 				96F44DAB26551F2500B63D53 /* OStrategyCell.swift in Sources */,
 				96F453272656C8EB00B63D53 /* NewsTableFeatureCell.swift in Sources */,
 				966E36B22653ED8200FB011D /* GetExchangesRequest.swift in Sources */,
@@ -1329,6 +1374,7 @@
 				966E369F2653E18B00FB011D /* ContentMediator.swift in Sources */,
 				96F452E82656830C00B63D53 /* NewsTableElement.swift in Sources */,
 				9696790C265857C40070E7F7 /* SignalsManager.swift in Sources */,
+				96967C3826625F440070E7F7 /* STExchangesCollectionView.swift in Sources */,
 				96967C31266217F00070E7F7 /* TokensTableViewCell.swift in Sources */,
 				96F44DB4265526F900B63D53 /* OSlideQuestionView.swift in Sources */,
 				96967928265A27B60070E7F7 /* UnlockPremiumView.swift in Sources */,
@@ -1337,6 +1383,8 @@
 				96F4529326564FFE00B63D53 /* TabItemView.swift in Sources */,
 				966E36762653D01000FB011D /* Content.swift in Sources */,
 				96991CF0264A8AD6008FFC69 /* PaygateMapper.swift in Sources */,
+				96967C48266282020070E7F7 /* STAllExchangesView.swift in Sources */,
+				96967C45266281F90070E7F7 /* STAllExchangesViewModel.swift in Sources */,
 				96991CFB264A8AD6008FFC69 /* PaygateManager.swift in Sources */,
 				96991CD2264A8AD6008FFC69 /* Collection+Extension.swift in Sources */,
 				966E367E2653D11600FB011D /* GetContentResponseMapper.swift in Sources */,

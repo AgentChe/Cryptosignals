@@ -8,8 +8,9 @@
 import UIKit
 
 final class SettingsView: UIView {
-    lazy var closeButton = makeCloseButton()
-    lazy var titleLabel = makeTitleLabel()
+    lazy var exchangesTitleLabel = makeSectionTitleLabel()
+    lazy var allExchangesButton = makeAllExchangesButton()
+    lazy var exchangesCollectionView = makeExchangesCollectionView()
     lazy var tokensTitleLabel = makeSectionTitleLabel()
     lazy var searchTokensView = makeSearchTokensView()
     lazy var tokensTableView = makeTokensTableView()
@@ -37,6 +38,7 @@ private extension SettingsView {
             .letterSpacing(0.37.scale)
             .textColor(UIColor.white)
         tokensTitleLabel.attributedText = "Settings.Tokens".localized.attributed(with: sectionTitleAttrs)
+        exchangesTitleLabel.attributedText = "Settings.Exchange".localized.attributed(with: sectionTitleAttrs)
     }
 }
 
@@ -44,15 +46,22 @@ private extension SettingsView {
 private extension SettingsView {
     func makeConstraints() {
         NSLayoutConstraint.activate([
-            closeButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16.scale),
-            closeButton.widthAnchor.constraint(equalToConstant: 32.scale),
-            closeButton.heightAnchor.constraint(equalToConstant: 32.scale),
-            closeButton.topAnchor.constraint(equalTo: topAnchor, constant: 59.scale)
+            exchangesTitleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16.scale),
+            exchangesTitleLabel.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 119.scale : 110.scale)
         ])
         
         NSLayoutConstraint.activate([
-            titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 55.scale)
+            allExchangesButton.heightAnchor.constraint(equalToConstant: 20.scale),
+            allExchangesButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16.scale),
+            allExchangesButton.centerYAnchor.constraint(equalTo: exchangesTitleLabel.centerYAnchor),
+            allExchangesButton.widthAnchor.constraint(equalToConstant: 60.scale)
+        ])
+        
+        NSLayoutConstraint.activate([
+            exchangesCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16.scale),
+            exchangesCollectionView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16.scale),
+            exchangesCollectionView.heightAnchor.constraint(equalToConstant: 36.scale),
+            exchangesCollectionView.topAnchor.constraint(equalTo: exchangesTitleLabel.bottomAnchor, constant: 16.scale)
         ])
         
         NSLayoutConstraint.activate([
@@ -78,31 +87,34 @@ private extension SettingsView {
 
 // MARK: Lazy initialization
 private extension SettingsView {
-    func makeCloseButton() -> UIButton {
-        let view = UIButton()
-        view.setImage(UIImage(named: "Settings.Close"), for: .normal)
-        view.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(view)
-        return view
-    }
-    
-    func makeTitleLabel() -> UILabel {
-        let attrs = TextAttributes()
-            .textColor(UIColor.white)
-            .font(Fonts.SFProDisplay.bold(size: 23.scale))
-            .lineHeight(40.scale)
-            .letterSpacing(0.37.scale)
-            .textAlignment(.center)
-        
-        let view = UILabel()
-        view.attributedText = "Settings.Title".localized.attributed(with: attrs)
-        view.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(view)
-        return view
-    }
-    
     func makeSectionTitleLabel() -> UILabel {
         let view = UILabel()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
+    }
+    
+    func makeAllExchangesButton() -> UIButton {
+        let attrs = TextAttributes()
+            .font(Fonts.SFProDisplay.semiBold(size: 17.scale))
+            .textColor(UIColor(integralRed: 63, green: 166, blue: 255))
+            .letterSpacing(0.37.scale)
+            .textAlignment(.right)
+        
+        let view = UIButton()
+        view.setAttributedTitle("Settings.All".localized.attributed(with: attrs), for: .normal)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
+    }
+    
+    func makeExchangesCollectionView() -> STExchangesCollectionView {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        
+        let view = STExchangesCollectionView(frame: .zero, collectionViewLayout: layout)
+        view.backgroundColor = UIColor.clear
+        view.showsHorizontalScrollIndicator = false
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

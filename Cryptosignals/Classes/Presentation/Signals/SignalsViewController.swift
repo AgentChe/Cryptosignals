@@ -123,7 +123,9 @@ private extension SignalsViewController {
         tapGesture.rx.event
             .subscribe(onNext: { [weak self] event in
                 let vc = SettingsViewController.make()
-                self?.navigationController?.present(vc, animated: true)
+                let nc = NursingNavigationController(rootViewController: vc)
+                nc.modalPresentationStyle = .overFullScreen
+                self?.navigationController?.present(nc, animated: true)
             })
             .disposed(by: disposeBag)
     }

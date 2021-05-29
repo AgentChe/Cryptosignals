@@ -23,14 +23,65 @@ final class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mainView.closeButton.rx.tap
+        viewModel.tokens
+            .drive(onNext: { [weak self] tokens in
+                self?.mainView.tokensTableView.setup(elements: tokens)
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel.exchanges
+            .drive(onNext: { [weak self] exchanges in
+                self?.mainView.exchangesCollectionView.setup(elements: exchanges)
+            })
+            .disposed(by: disposeBag)
+        
+        mainView.searchTokensView
+            .textField.rx.text
+            .compactMap { $0 }
+            .bind(to: viewModel.searchToken)
+            .disposed(by: disposeBag)
+        
+        mainView.allExchangesButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                let vc = STAllExchangesViewController.make()
+                self?.navigationController?.pushViewController(vc, animated: true)
+            })
+            .disposed(by: disposeBag)
+        
+        addCloseItem()
+    }
+}
+
+// MARK: Make
+extension SettingsViewController {
+    static func make() -> SettingsViewController {
+        let vc = SettingsViewController()
+        vc.navigationItem.backButtonTitle = " "
+        vc.navigationItem.title = "Settings.Title".localized
+        vc.modalPresentationStyle = .overFullScreen
+        return vc
+    }
+}
+
+// MARK: Private
+private extension SettingsViewController {
+    func addCloseItem() {
+        let item = UIBarButtonItem()
+        item.image = UIImage(named: "Settings.Close")
+        navigationItem.leftBarButtonItem = item
+        
+        item.rx.tap
             .asDriver(onErrorDriveWith: .never())
             .flatMapLatest { [weak self] _ -> Driver<Bool> in
                 guard let self = self else {
                     return .never()
                 }
                 
-                let exchangesIds = [Int]()
+                let exchangesIds = self.mainView
+                    .exchangesCollectionView
+                    .elements
+                    .filter { $0.isSelected }
+                    .map { $0.exchange.id }
                 
                 let currenciesIds = self.mainView
                     .tokensTableView
@@ -50,27 +101,5 @@ final class SettingsViewController: UIViewController {
                 }
             })
             .disposed(by: disposeBag)
-        
-        viewModel.tokens
-            .drive(onNext: { [weak self] tokens in
-                self?.mainView.tokensTableView.setup(elements: tokens)
-            })
-            .disposed(by: disposeBag)
-        
-        mainView.searchTokensView
-            .textField.rx.text
-            .compactMap { $0 }
-            .bind(to: viewModel.searchToken)
-            .disposed(by: disposeBag)
-    }
-}
-
-// MARK: Make
-extension SettingsViewController {
-    static func make() -> SettingsViewController {
-        let vc = SettingsViewController()
-        vc.navigationItem.backButtonTitle = " "
-        vc.modalPresentationStyle = .overFullScreen
-        return vc
     }
 }
