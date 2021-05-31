@@ -11,6 +11,7 @@ final class OSlideRiskView: OSlideView {
     lazy var titleLabel = makeTitleLabel()
     lazy var subTitleLabel = makeSubTitleLabel()
     lazy var profitTitleLabel = makeProfitTitleLabel()
+    lazy var profitView = makeProfitView()
     lazy var slider = makeSlider()
     lazy var button = makeButton()
     
@@ -46,6 +47,7 @@ private extension OSlideRiskView {
         }
         
         updateSliderValue(with: value)
+        updateProfit(with: value)
     }
     
     func updateSliderValue(with value: Int) {
@@ -65,6 +67,24 @@ private extension OSlideRiskView {
         let trackRect = slider.trackRect(forBounds: slider.frame)
         let thumbRect = slider.thumbRect(forBounds: slider.bounds, trackRect: trackRect, value: roundf(slider.value))
         sliderValueLabel.center = CGPoint(x: thumbRect.midX, y: slider.frame.minY - sliderValueLabel.frame.height)
+    }
+    
+    func updateProfit(with value: Int) {
+        let transformValue = transform(sliderValue: value)
+        profitView.profit = transformValue
+    }
+    
+    func transform(sliderValue: Int) -> Int {
+        switch sliderValue {
+        case 1, 2, 3, 4, 5:
+            return sliderValue
+        case 6:
+            return 10
+        case 7:
+            return 20
+        default:
+            return 20
+        }
     }
 }
 
@@ -86,6 +106,13 @@ private extension OSlideRiskView {
         NSLayoutConstraint.activate([
             profitTitleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32.scale),
             profitTitleLabel.topAnchor.constraint(equalTo: subTitleLabel.bottomAnchor, constant: 24.scale)
+        ])
+        
+        NSLayoutConstraint.activate([
+            profitView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32.scale),
+            profitView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32.scale),
+            profitView.heightAnchor.constraint(equalToConstant: 42.scale),
+            profitView.topAnchor.constraint(equalTo: profitTitleLabel.bottomAnchor)
         ])
         
         NSLayoutConstraint.activate([
@@ -143,6 +170,14 @@ private extension OSlideRiskView {
         
         let view = UILabel()
         view.attributedText = "Onboarding.Risk.Profit".localized.attributed(with: attrs)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
+    }
+    
+    func makeProfitView() -> ProfitView {
+        let view = ProfitView()
+        view.backgroundColor = UIColor.clear
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view
