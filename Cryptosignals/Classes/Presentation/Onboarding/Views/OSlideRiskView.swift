@@ -12,6 +12,7 @@ final class OSlideRiskView: OSlideView {
     lazy var subTitleLabel = makeSubTitleLabel()
     lazy var profitTitleLabel = makeProfitTitleLabel()
     lazy var profitView = makeProfitView()
+    lazy var rateView = makeRateView()
     lazy var slider = makeSlider()
     lazy var button = makeButton()
     
@@ -48,6 +49,7 @@ private extension OSlideRiskView {
         
         updateSliderValue(with: value)
         updateProfit(with: value)
+        updateRate(with: value)
     }
     
     func updateSliderValue(with value: Int) {
@@ -72,6 +74,11 @@ private extension OSlideRiskView {
     func updateProfit(with value: Int) {
         let transformValue = transform(sliderValue: value)
         profitView.profit = transformValue
+    }
+    
+    func updateRate(with value: Int) {
+        let transformValue = transform(sliderValue: value)
+        rateView.setup(value: transformValue)
     }
     
     func transform(sliderValue: Int) -> Int {
@@ -113,6 +120,13 @@ private extension OSlideRiskView {
             profitView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32.scale),
             profitView.heightAnchor.constraint(equalToConstant: 42.scale),
             profitView.topAnchor.constraint(equalTo: profitTitleLabel.bottomAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            rateView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            rateView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            rateView.topAnchor.constraint(equalTo: profitView.bottomAnchor, constant: ScreenSize.isIphoneXFamily ? 39.scale : 22.scale),
+            rateView.heightAnchor.constraint(equalToConstant: ScreenSize.isIphoneXFamily ? 183.scale : 153.scale)
         ])
         
         NSLayoutConstraint.activate([
@@ -177,6 +191,14 @@ private extension OSlideRiskView {
     
     func makeProfitView() -> ProfitView {
         let view = ProfitView()
+        view.backgroundColor = UIColor.clear
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
+    }
+    
+    func makeRateView() -> RateView {
+        let view = RateView()
         view.backgroundColor = UIColor.clear
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)

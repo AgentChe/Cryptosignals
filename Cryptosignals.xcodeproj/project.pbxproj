@@ -49,6 +49,8 @@
 		967819702662A3FF0033134D /* STAllExchangesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9678196F2662A3FF0033134D /* STAllExchangesTableView.swift */; };
 		967819912662A40F0033134D /* STAllExchangesTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967819902662A40F0033134D /* STAllExchangesTableCell.swift */; };
 		967819942662B6940033134D /* ProfitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967819932662B6940033134D /* ProfitView.swift */; };
+		967819972664DE4D0033134D /* RateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967819962664DE4D0033134D /* RateView.swift */; };
+		967819BB2664FB5D0033134D /* RateCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967819BA2664FB5D0033134D /* RateCircleView.swift */; };
 		969678F9265853570070E7F7 /* CryptoSignal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969678F8265853570070E7F7 /* CryptoSignal.swift */; };
 		969678FF265855460070E7F7 /* GetClosedSignalsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969678FE265855460070E7F7 /* GetClosedSignalsRequest.swift */; };
 		96967902265855BC0070E7F7 /* GetClosedSignalsResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96967901265855BB0070E7F7 /* GetClosedSignalsResponseMapper.swift */; };
@@ -213,6 +215,8 @@
 		9678196F2662A3FF0033134D /* STAllExchangesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STAllExchangesTableView.swift; sourceTree = "<group>"; };
 		967819902662A40F0033134D /* STAllExchangesTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STAllExchangesTableCell.swift; sourceTree = "<group>"; };
 		967819932662B6940033134D /* ProfitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfitView.swift; sourceTree = "<group>"; };
+		967819962664DE4D0033134D /* RateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateView.swift; sourceTree = "<group>"; };
+		967819BA2664FB5D0033134D /* RateCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateCircleView.swift; sourceTree = "<group>"; };
 		969678F8265853570070E7F7 /* CryptoSignal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoSignal.swift; sourceTree = "<group>"; };
 		969678FE265855460070E7F7 /* GetClosedSignalsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetClosedSignalsRequest.swift; sourceTree = "<group>"; };
 		96967901265855BB0070E7F7 /* GetClosedSignalsResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetClosedSignalsResponseMapper.swift; sourceTree = "<group>"; };
@@ -387,6 +391,7 @@
 		9628AF1B264ECF0B00C93AA7 /* Atoms */ = {
 			isa = PBXGroup;
 			children = (
+				967819B82664FB460033134D /* RateView */,
 				966E36BD2653F10B00FB011D /* ExchangesCollection */,
 				966E36602653C5C200FB011D /* CurrenciesCollection */,
 				9628B6232652943700C93AA7 /* OLevelCell.swift */,
@@ -497,6 +502,15 @@
 				966E36C42653F1BC00FB011D /* ExchangesCollectionElement.swift */,
 			);
 			path = ExchangesCollection;
+			sourceTree = "<group>";
+		};
+		967819B82664FB460033134D /* RateView */ = {
+			isa = PBXGroup;
+			children = (
+				967819962664DE4D0033134D /* RateView.swift */,
+				967819BA2664FB5D0033134D /* RateCircleView.swift */,
+			);
+			path = RateView;
 			sourceTree = "<group>";
 		};
 		969678F6265853330070E7F7 /* Signals */ = {
@@ -1304,6 +1318,7 @@
 				96F453352656CB6000B63D53 /* PostTableElement.swift in Sources */,
 				96F44DB1265525B300B63D53 /* OQuestionFormView.swift in Sources */,
 				96F452DE26567CB500B63D53 /* NewsTableView.swift in Sources */,
+				967819BB2664FB5D0033134D /* RateCircleView.swift in Sources */,
 				96967907265857910070E7F7 /* GetOpenedSignalsRequest.swift in Sources */,
 				96991CE6264A8AD6008FFC69 /* CircleView.swift in Sources */,
 				96991D56264A8AD7008FFC69 /* PaygateViewControllerDelegate.swift in Sources */,
@@ -1376,6 +1391,7 @@
 				969679242658E3D30070E7F7 /* CryptoSignalsTableCell.swift in Sources */,
 				96991D21264A8AD7008FFC69 /* SessionManager.swift in Sources */,
 				96991CDB264A8AD6008FFC69 /* Fonts.swift in Sources */,
+				967819972664DE4D0033134D /* RateView.swift in Sources */,
 				966E36702653CD8800FB011D /* SaveSelectedCurrenciesRequest.swift in Sources */,
 				966E36A22653E1DF00FB011D /* ContentMediatorDelegate.swift in Sources */,
 				966E36682653C5C200FB011D /* CurrenciesCollectionCell.swift in Sources */,

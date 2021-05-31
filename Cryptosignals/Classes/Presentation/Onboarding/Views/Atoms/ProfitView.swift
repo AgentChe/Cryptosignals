@@ -9,7 +9,7 @@ import UIKit
 
 final class ProfitView: UIView {
     // 1, 2, 3, 4, 5, 10, 20
-    var profit: Int = 0 {
+    var profit: Int = 1 {
         didSet {
             update()
         }

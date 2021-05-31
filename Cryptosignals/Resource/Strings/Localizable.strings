@@ -46,6 +46,8 @@
 "Onboarding.Risk.Title" = "Pick your risk-reward ratio";
 "Onboarding.Risk.SubTitle" = "It used to assess the profit potential of a trade relative to its potential loss";
 "Onboarding.Risk.Profit" = "Profit";
+"Onboarding.Risk.WinRate" = "win rate %@%%";
+"Onboarding.Risk.LoseRate" = "lose rate %@%%";
 "Onboarding.Strategy.Title" = "Select your trading\nstrategies";
 "Onboarding.Strategy.Cell1" = "Day trading";
 "Onboarding.Strategy.Cell2" = "Swing trading";
